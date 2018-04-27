@@ -38,6 +38,13 @@ class Message(BaseMessage):
         self._type=0
 
 
+class RegistMsg(BaseMessage):
+
+    def __init__(self):
+        self._type=1
+
+
+
 def main():
     data=''
     if  not data:#not None == not False == not '' == not 0 == not [] == not {} == not ()  False
