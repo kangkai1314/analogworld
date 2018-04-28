@@ -43,6 +43,30 @@ class RegistMsg(BaseMessage):
     def __init__(self):
         self._type=1
 
+    def get_msg(self):
+        msg=''
+        return msg
+
+    def set_msg(self,msg):
+        self.msg=msg
+
+
+class LoginMsg(BaseMessage):
+    def __init__(self):
+        BaseMessage.__init__()
+        self._type=2
+
+    def get_msg(self):
+        pass
+
+    def get_msg_type(self):
+        return self.msg
+
+
+class FriendMsg(BaseMessage):
+    def __init__(self):
+        BaseMessage.__init__()
+        self._type=3
 
 
 def main():

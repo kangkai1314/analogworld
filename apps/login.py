@@ -2,6 +2,7 @@
 
 from module.user import User
 from utils.check import *
+from module.message import *
 UserDict={}
 
 class Action(object):
@@ -24,8 +25,9 @@ class Login(Action):
 
     '''
     action_id = 2
-    def __init__(self):
+    def __init__(self,user):
         self.msg=None
+        self.user=user
 
 
     def check(self,user):
@@ -35,21 +37,44 @@ class Login(Action):
             raise TypeError('check func not get correct param')
 
     def run(self,account,passwd):
-        c=ERROR()
-        print c
+        if account is self.user._account and passwd is self.user._getpasswd():
+            return  'login success'
+        else:
+            print 'username or passwd is wrong ,please check'
+            return 'login failed'
+
+
 
 
 
 class Regist(Action):
     action_id = 3
-    def __init__(self):
-        pass
+    def __init__(self,user):
+        self.user=user
 
     def check(self,*args,**kwargs):
-        pass
+        if self.user:
+            if self.user in UserDict:
+                return CheckMessage('debug','User is already be registed')
+            else:
+                self.run()
+
 
     def run(self,*args,**kwargs):
-        pass
+        if self.user:
+            pass
+
+    def write_user_info(self):
+        username=self.user._account
+        passwd=self.user._getpasswd()
+
+
+
+class Logout(Action):
+    
+
+
+
 
 
 class PlayMusic(Action):
