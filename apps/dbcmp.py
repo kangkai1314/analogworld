@@ -191,10 +191,6 @@ class ComparasionResult():
             sql='''insert into at_tc_dbcmp_result   '''
 
 
-
-
-
-
 def main():
     table_name='dr_gsm_701_201804'
     cmp=Compare(table_name)

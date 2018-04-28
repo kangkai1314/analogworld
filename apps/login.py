@@ -1,9 +1,13 @@
 #--*-- coding:utf-8 --*--
+import os,sys
+import requests
 
 from module.user import User
 from utils.check import *
 from module.message import *
+
 UserDict={}
+Music_Path=u'D:\CloudMusic'
 
 class Action(object):
     action_id=1
@@ -14,8 +18,6 @@ class Action(object):
 
     def check(self,*args,**kwargs):
         raise NotImplementedError
-
-
 
 class Login(Action):
     '''
@@ -43,10 +45,6 @@ class Login(Action):
             print 'username or passwd is wrong ,please check'
             return 'login failed'
 
-
-
-
-
 class Regist(Action):
     action_id = 3
     def __init__(self,user):
@@ -68,31 +66,53 @@ class Regist(Action):
         username=self.user._account
         passwd=self.user._getpasswd()
 
-
-
 class Logout(Action):
-    
+    action_id = 5
+
+    def __init__(self):
+        self.user=None
 
 
+    def run(self,*args,**kwargs):
+        if self.user:
+            pass
 
 
 
 class PlayMusic(Action):
     action_id = 4
 
-    def __init__(self):
-        pass
+    def __init__(self,song_id):
+        self.song_id=song_id
+        self.session=requests.Session()
 
-    def check(self):
+
+    def get_song_src(self):
+        path=self.get_song_location()
+        if path:
+            print path
+            filelst=os.listdir(path)
+            return [Music_Path+'\\'+i for i in filelst if i.endswith('mp3')]
+
+    def get_song_location(self):
+        return Music_Path
+
+
+    def run(self,*args,**kwargs):
+        music=self.get_song_src()
+        os.system(music)
+
+
 
 
 
 
 
 def main():
-    path='/www.baidu.com'
-    print is_absolute(path)
-
+    p=PlayMusic(1)
+    h=p.get_song_src()
+    print h
+    print h[0].encode('utf-8')
 
 if __name__ == '__main__':
     main()
