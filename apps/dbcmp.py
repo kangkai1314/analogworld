@@ -5,6 +5,7 @@ db比对算法
 
 '''
 import threading
+import datetime
 
 CmpDict={'1':'TotalFeeCount',
          '2':'ConsistentFeeCount',
@@ -17,6 +18,10 @@ class Sql(object):
 
     def __init__(self,table_name):
         self.table_name=table_name
+        self.busi=self.get_busi()
+
+    def get_busi(self):
+        return self.table_name.split('_')[1]
 
     def do_preconditon(self):
         raise NotImplementedError
@@ -37,13 +42,19 @@ class TotalFeeCount(Sql):
         Sql.__init__(table_name)
         self.flag=flag
 
+
     def generate(self,dbuser):
-        base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser,TABLE_NAME=self.table_name)
-        return self.flag,base_sql
+        if self.busi is not 'upload':
+            base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser,TABLE_NAME=self.table_name)
+            return self.flag,base_sql
+        else:
+            base_sql = '''select count(*) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser, TABLE_NAME=self.table_name)
+            return self.flag, base_sql
+
     def run(self,sql):
         if sql:
             ret=sql.execute()
-            return self.flag,ret
+            return self.flag,ret,self.__name__
 
 
 class ConsistentFeeCount(Sql):
@@ -61,6 +72,9 @@ class OldMoreFeeCount(Sql):
 
     def __init__(self,table_name):
         Sql.__init__(table_name)
+
+    def do_preconditon(self):
+        create_table='''create table as select '''
 
     def generate(self,*args,**kwargs):
         base_sql=''''''
@@ -113,8 +127,6 @@ class Compare():
     def __exit__(self, exc_type, exc_val, exc_tb):
         print 'Compare function is exit'
 
-
-
     def _clean(self):
         if self.table_name:
             sql='''delete from {TABLE_NAME} where task_id={TASK_ID} '''.format(TABLE_NAME=self.table_name,TASK_ID='')
@@ -162,6 +174,29 @@ class Compare():
         t=threading.Thread(target=self._run,args=(cmp_result,))
         t.start()
 
+class CmpTableObj():
+    def __init__(self,table):
+        self.table=table
+
+    def build_table(self):
+        if self.table:
+            busi=self.get_busi_type()
+            if busi:
+                if busi=='gsm' or busi=='ggprs':
+                    all_region_codes=[]
+                    return [i for i in all_region_codes]
+                else:
+                    table_name=''
+                    return table_name
+
+    def get_busi_type(self):
+        if self.table:
+            busi=''
+            return busi
+
+    def get_curr_days(self):
+        now_day=datetime.datetime.now().strftime('%Y%m')
+        return now_day
 
 
 class ComparasionResult():

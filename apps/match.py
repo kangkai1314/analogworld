@@ -12,6 +12,7 @@ class Match():
     def __init__(self,user):
         self.curruser=user
         self.matchuser=None
+        print self.__name__
 
     def get_wait_queue(self):
         return Queue.Queue()
@@ -30,8 +31,9 @@ class Match():
 
 def main():
     user = User('kangkai', 'hello', 2)
-    matchobj=Match(user)
-    matchobj.run()
+    #matchobj=Match(user)
+    #matchobj.run()
+    print type(User.__name__)
 
 if __name__ == '__main__':
     main()
