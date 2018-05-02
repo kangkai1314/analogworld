@@ -30,6 +30,7 @@ class Login(Action):
     def __init__(self,user):
         self.msg=None
         self.user=user
+        self.login_time=
 
 
     def check(self,user):
@@ -49,6 +50,7 @@ class Regist(Action):
     action_id = 3
     def __init__(self,user):
         self.user=user
+        self.regist_time=None
 
     def check(self,*args,**kwargs):
         if self.user:
@@ -66,18 +68,23 @@ class Regist(Action):
         username=self.user._account
         passwd=self.user._getpasswd()
 
+    def get_regist_time(self):
+        return self.regist_time
+
 class Logout(Action):
     action_id = 5
 
     def __init__(self):
         self.user=None
+        self.logout_time=None
 
 
     def run(self,*args,**kwargs):
         if self.user:
             pass
 
-
+    def get_logout_time(self):
+        return self.logout_time
 
 class PlayMusic(Action):
     action_id = 4
@@ -101,11 +108,6 @@ class PlayMusic(Action):
     def run(self,*args,**kwargs):
         music=self.get_song_src()
         os.system(music)
-
-
-
-
-
 
 
 def main():
