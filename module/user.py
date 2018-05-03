@@ -73,8 +73,6 @@ def main():
     p.SetProfile(p,sex=0,tel=18086630180,hello='text')
 
 
-
-
 if __name__ == '__main__':
     main()
 

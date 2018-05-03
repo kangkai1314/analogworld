@@ -35,6 +35,13 @@ class Sql(object):
     def check(self):
         raise NotImplementedError
 
+    def get_dbuser(self,flag=None):
+        if flag is None:
+            dbusers=''
+            return
+        dbuser=''
+        return dbuser
+
 class TotalFeeCount(Sql):
     type=1#话单和费用总数
 
@@ -43,7 +50,8 @@ class TotalFeeCount(Sql):
         self.flag=flag
 
 
-    def generate(self,dbuser):
+    def generate(self):
+        dbuser = self.get_dbuser(self.flag)
         if self.busi is not 'upload':
             base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser,TABLE_NAME=self.table_name)
             return self.flag,base_sql
@@ -51,10 +59,11 @@ class TotalFeeCount(Sql):
             base_sql = '''select count(*) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser, TABLE_NAME=self.table_name)
             return self.flag, base_sql
 
-    def run(self,sql):
+    def run(self):
+        sql=self.generate()
         if sql:
             ret=sql.execute()
-            return self.flag,ret,self.__name__
+            return self.flag,ret
 
 
 class ConsistentFeeCount(Sql):
@@ -63,22 +72,43 @@ class ConsistentFeeCount(Sql):
     def __init__(self,table_name):
         Sql.__init__(table_name)
 
+    def do_preconditon(self):
+        sql='''create table as (select * from ud_old.{table}) minus (select * from ud_new.{table})'''
+
     def generate(self,*args,**kwargs):
-        base_sql=''''''
+        base_sql='''sel'''
         return base_sql
+
+    def run(self):
+        pass
+
 
 class OldMoreFeeCount(Sql):
     type=3#旧有新无
 
     def __init__(self,table_name):
+
         Sql.__init__(table_name)
+        #dr_gsm_201708
 
     def do_preconditon(self):
-        create_table='''create table as select '''
-
-    def generate(self,*args,**kwargs):
-        base_sql=''''''
+        tmp_table='More_Old_%s'%(self.table_name)
+        old_table=''
+        new_table=''
+        create_table='''create table {tmp_tab}as select * from {old_table} minus select * from {new_table}'''.format(tmp_tab=tmp_table,old_table=old_table,new_table=new_table)
+        create_table.excute()
+        return tmp_table
+    def generate(self):
+        tmp=self.do_preconditon()
+        if tmp:
+            base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {tmp}'''.format(tmp=tmp)
         return base_sql
+    def run(self):
+        sql=self.generate()
+        if sql:
+            ret=sql.execute()
+            return ret
+
 
 class NewMoreFeeCount(Sql):
     type=4
@@ -86,10 +116,31 @@ class NewMoreFeeCount(Sql):
     def __init__(self,table_name):
         Sql.__init__(table_name)
 
+    def do_preconditon(self):
+        tmp_table = 'More_New_%s' % (self.table_name)
+        old_table = ''
+        new_table = ''
+        create_table = '''create table {tmp_tab}as ((select * from {new_table}) minus (select * from {old_table}))'''.format(
+            tmp_tab=tmp_table, old_table=old_table, new_table=new_table)
 
-    def generate(self,*args,**kwargs):
-        base_sql=''''''
+        msg=create_table.excute()
+        if msg=='success':
+            pass
+        else:
+            return False
+        return tmp_table
+
+    def generate(self):
+        tmp=self.do_preconditon()
+        if tmp:
+            base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {tmp}'''.format(tmp=tmp)
         return base_sql
+
+    def run(self):
+        sql=self.generate()
+        if sql:
+            ret=sql.execute()
+            return ret
 
 class UnconsistentCount(Sql):
     type=5#不一致的条数
@@ -130,6 +181,7 @@ class Compare():
     def _clean(self):
         if self.table_name:
             sql='''delete from {TABLE_NAME} where task_id={TASK_ID} '''.format(TABLE_NAME=self.table_name,TASK_ID='')
+
 
     def _run(self,result):
         if self.table_name:
@@ -208,6 +260,7 @@ class ComparasionResult():
     def CaculatePassRate(self):
 
         rate=''
+
         return rate
 
     def ProcessToReport(self):

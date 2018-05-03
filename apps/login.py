@@ -30,8 +30,7 @@ class Login(Action):
     def __init__(self,user):
         self.msg=None
         self.user=user
-        self.login_time=
-
+        self.login_time=None
 
     def check(self,user):
         if isinstance(user,User):
@@ -58,7 +57,6 @@ class Regist(Action):
                 return CheckMessage('debug','User is already be registed')
             else:
                 self.run()
-
 
     def run(self,*args,**kwargs):
         if self.user:
