@@ -108,11 +108,7 @@ class PlayMusic(Action):
         os.system(music)
 
 
-def main():
-    p=PlayMusic(1)
-    h=p.get_song_src()
-    print h
-    print h[0].encode('utf-8')
+
 
 if __name__ == '__main__':
     main()
