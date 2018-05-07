@@ -43,6 +43,8 @@ class Client(object):
         return client
     def handle_msg(self,msg):
         if msg=='login success':
+            pass
+
 
 
     def send_msg(self,msgType,data):

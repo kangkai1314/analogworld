@@ -6,6 +6,7 @@ db比对算法
 '''
 import threading
 import datetime
+from apps.compare import *
 
 CmpDict={'1':'TotalFeeCount',
          '2':'ConsistentFeeCount',
@@ -168,87 +169,35 @@ class UnconsistentFee(Sql):
         else:
             raise Exception('')
 
-class Compare():
+
+
+class Builder():
     def __init__(self,table_name):
-        self.table_name=table_name#table_name:dr_ggprs_770_20170809
 
-    def __enter__(self):
-        pass
+        self.table_name=table_name
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print 'Compare function is exit'
+    def config_dbcompare(self):
+        self.db_compare=DbCompare(self.table_name)
+        self.db_compare.totalfeecount=TotalFeeCount(self.table_name)
+        self.db_compare.consistentfeecount=ConsistentFeeCount(self.table_name)
+        self.db_compare.oldmorefeecount=OldMoreFeeCount(self.table_name)
+        self.db_compare.newmorefeecount=NewMoreFeeCount(self.table_name)
+        self.db_compare.unconsistentcount=UnconsistentCount(self.table_name)
+        self.db_compare.unconsistentfee=UnconsistentFee(self.table_name)
 
-    def _clean(self):
-        if self.table_name:
-            sql='''delete from {TABLE_NAME} where task_id={TASK_ID} '''.format(TABLE_NAME=self.table_name,TASK_ID='')
+    def config_mdbcompare(self):
+        self.mdb_compare=MdbCompare(self.table_name)
+        self.mdb_compare.totalfeecount(self.table_name)
+
+    def config_errcompare(self):
+        self.errcompare=Compare(self.table_name)
+        self.errcompare.totalfeecount=TotalFeeCount(self.table_name)
 
 
-    def _run(self,result):
-        if self.table_name:
-            for key,items in enumerate(CmpDict):
-                key=str(int(key)+1)
-                print key
-                if key==str(1):
-                    for i in (0,1):
-                        flag=i
-                        t=TotalFeeCount(self.table_name,flag)
-                        ret=t.run()
-                        if len(ret)<2:
-                            raise Exception('Count %s Info Failed'%(items))
-                        result[items]=ret
-                elif key==str(2):
-                    t= ConsistentFeeCount(self.table_name)
-                    t.run()
-                    result[items]=ret
-                elif key==str(3):
-                    t= OldMoreFeeCount(self.table_name)
-                    t.run()
-                    result[items]=ret
-                elif key==str(4):
-                    t= NewMoreFeeCount(self.table_name)
-                    t.run()
-                    result[items]=ret
-                elif key==str(5):
-                    t= UnconsistentFee(self.table_name)
-                    t.run()
-                    result[items]=ret
-                elif key==str(6):
-                    t= UnconsistentCount(self.table_name)
-                    t.run()
-                    result[items]=ret
-                else:
-                    raise TypeError('Not Support current type')
-        else:
-            raise Exception('current table name is null')
+    def config_uploadcompare(self):
+        self.upload_compare=Compare(self.table_name)
+        self.upload_compare.totalfeecount=TotalFeeCount(self.table_name)
 
-    def run(self,result):
-        cmp_result = ComparasionResult(self.table_name)
-        t=threading.Thread(target=self._run,args=(cmp_result,))
-        t.start()
-
-class CmpTableObj():
-    def __init__(self,table):
-        self.table=table
-
-    def build_table(self):
-        if self.table:
-            busi=self.get_busi_type()
-            if busi:
-                if busi=='gsm' or busi=='ggprs':
-                    all_region_codes=[]
-                    return [i for i in all_region_codes]
-                else:
-                    table_name=''
-                    return table_name
-
-    def get_busi_type(self):
-        if self.table:
-            busi=''
-            return busi
-
-    def get_curr_days(self):
-        now_day=datetime.datetime.now().strftime('%Y%m')
-        return now_day
 
 
 class ComparasionResult():
@@ -279,14 +228,7 @@ class ComparasionResult():
             sql='''insert into at_tc_dbcmp_result   '''
 
 
-def main():
-    table_name='dr_gsm_701_201804'
-    cmp=Compare(table_name)
-    cmp.run('pass')
 
-
-if __name__ == '__main__':
-    main()
 
 
 
