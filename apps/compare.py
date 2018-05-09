@@ -2,28 +2,40 @@
 CmpDict={}
 from apps.dbcmp import *
 
-class Publisher(object):
-    def __init__(self):
-        self.observers=[]
 
-    def add(self,observer):
-        if observer not in self.observers:
-            self.observers.append(observer)
-        else:
-            return False
+class ComparasionResult():
 
-    def remove(self,observer):
-        if observer in self.observers:
-            self.observers.remove(observer)
-        else:
-            return False
-
-    def notify(self):
-        [o.notify(self) for o in self.observers]
-
-class Compare(Publisher):
     def __init__(self,table_name):
-        Publisher.__init__(self)
+        self.table_name=table_name
+        self.result_dic={ v:k for k,v in CmpDict.items()}
+
+
+
+    def CaculatePassRate(self):
+
+        rate=''
+
+        return rate
+
+    def ProcessToReport(self):
+        report={}
+        for key,items in self.result_dic:
+            if key is 'TotalFeeCount':
+                total_fee,total_count=items
+            else:
+                report[key]=items
+        pass_rate=self.CaculatePassRate()
+        report['pass_rate']=pass_rate
+
+
+    def insert(self):
+        if self.result_dic:
+            sql='''insert into at_tc_dbcmp_result   '''
+
+
+class Compare(ComparasionResult):
+    def __init__(self,table_name):
+        ComparasionResult.__init__(table_name)
         self.table_name=table_name#table_name:dr_ggprs_770_20170809
         self.builder=None
 
@@ -115,8 +127,21 @@ class Compare(Publisher):
         else:
             raise Exception('current table name is null')
 
-    def run(self,*agrs,**kwargs):
-        raise NotImplementedError
+    def run(self):
+        content = self.build_compare_content()
+        if content:
+            for k in content:
+                ret = k.run()
+                if k in self.result_dic:
+                    self.result_dic[k] = ret
+        return self.result_dic
+
+    def update_result(self):
+        if self.result_dic:
+            for k in self.result_dic:
+                update_sql = ''''''
+                update_sql.execute()
+        return True
 
     def build_compare_content(self):
         raise NotImplementedError

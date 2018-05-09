@@ -7,6 +7,7 @@ db比对算法
 import threading
 import datetime
 from apps.compare import *
+from functools import wraps
 
 CmpDict={'1':'TotalFeeCount',
          '2':'ConsistentFeeCount',
@@ -14,6 +15,42 @@ CmpDict={'1':'TotalFeeCount',
          '4':'NewMoreFeeCount',
          '5':'UnconsistentCount',
          '6':'UnconsistentFee'}
+
+
+def check_table_exist(func,table, dbobj):
+    @wraps(func)
+    def wrapper(dbobj, func, table, *args, **kwargs):
+        sql = '''select count(*) from {table} '''.format(table=table)
+        lst, msg = dbobj.execute(sql)
+        if 'ORA-00942' in msg:
+            return False
+        elif msg is 'select finished':
+            ret = func(*args, **kwargs)
+            return ret
+        else:
+            return False
+
+    return wrapper
+
+def check_table(table,dbobj):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args,**kwargs):
+            check_sql='''select count(*) from {}'''.format(table)
+            lst, msg = dbobj.execute(sql)
+            if 'ORA-00942' in msg:
+                return False
+            elif msg is 'select finished':
+                ret = func(*args, **kwargs)
+                return ret
+            else:
+                return False
+
+        return wrapper
+    return decorator
+
+
+
 class Sql(object):
     type=0#话单条数
 
@@ -38,16 +75,18 @@ class Sql(object):
 
     def get_dbuser(self,flag=None):
         if flag is None:
-            dbusers=''
+            dbusers='atptest'
             return
-        dbuser=''
+        dbuser='atptest'
         return dbuser
+
+
 
 class TotalFeeCount(Sql):
     type=1#话单和费用总数
 
     def __init__(self,table_name,flag):
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
         self.flag=flag
 
 
@@ -59,11 +98,11 @@ class TotalFeeCount(Sql):
         else:
             base_sql = '''select count(*) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=dbuser, TABLE_NAME=self.table_name)
             return self.flag, base_sql
-
-    def run(self):
-        sql=self.generate()
+    @check_table(table_name=self.table_name,)
+    def run(self,dbObj):
+        flag,sql=self.generate()
         if sql:
-            ret=sql.execute()
+            ret=dbObj.execute(sql)
             return self.flag,ret
 
 
@@ -71,7 +110,7 @@ class ConsistentFeeCount(Sql):
     type=2#一致的话单数和费用
 
     def __init__(self,table_name):
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
 
     def do_preconditon(self):
         sql='''create table as (select * from ud_old.{table}) minus (select * from ud_new.{table})'''
@@ -88,26 +127,28 @@ class OldMoreFeeCount(Sql):
     type=3#旧有新无
 
     def __init__(self,table_name):
-
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
         #dr_gsm_201708
 
     def do_preconditon(self):
         tmp_table='More_Old_%s'%(self.table_name)
-        old_table=''
-        new_table=''
-        create_table='''create table {tmp_tab}as select * from {old_table} minus select * from {new_table}'''.format(tmp_tab=tmp_table,old_table=old_table,new_table=new_table)
-        create_table.excute()
+        old_table='%s'%(self.table_name)
+        new_table='%s'%(self.table_name)
+        create_table='''create table {tmp_tab} as select * from {old_table} minus select * from {new_table}'''.format(tmp_tab=tmp_table,old_table=old_table,new_table=new_table)
+        print create_table
+        #create_table.excute()
         return tmp_table
     def generate(self):
         tmp=self.do_preconditon()
         if tmp:
             base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {tmp}'''.format(tmp=tmp)
         return base_sql
-    def run(self):
+    @check_table_exist(dbobj=self.dbobj)
+    def run(self,dbobj):
         sql=self.generate()
+        print sql
         if sql:
-            ret=sql.execute()
+            ret=dbobj.execute(sql)
             return ret
 
 
@@ -115,13 +156,13 @@ class NewMoreFeeCount(Sql):
     type=4
 
     def __init__(self,table_name):
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
 
     def do_preconditon(self):
         tmp_table = 'More_New_%s' % (self.table_name)
         old_table = ''
         new_table = ''
-        create_table = '''create table {tmp_tab}as ((select * from {new_table}) minus (select * from {old_table}))'''.format(
+        create_table = '''create table {tmp_tab} as ((select * from {new_table}) minus (select * from {old_table}))'''.format(
             tmp_tab=tmp_table, old_table=old_table, new_table=new_table)
 
         msg=create_table.excute()
@@ -147,7 +188,7 @@ class UnconsistentCount(Sql):
     type=5#不一致的条数
 
     def __init__(self,table_name):
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
 
     def generate(self,*args,**kwargs):
         base_sql=''''''
@@ -157,7 +198,7 @@ class UnconsistentFee(Sql):
     type=6#不一致的费用数
 
     def __init__(self,table_name,flag):
-        Sql.__init__(table_name)
+        Sql.__init__(self,table_name)
         self.flag=flag
 
     def generate(self,*args,**kwargs):
@@ -198,34 +239,6 @@ class Builder():
         self.upload_compare=Compare(self.table_name)
         self.upload_compare.totalfeecount=TotalFeeCount(self.table_name)
 
-
-
-class ComparasionResult():
-
-    def __init__(self,table_name):
-        self.table_name=table_name
-        self.result_dic={}
-
-    def CaculatePassRate(self):
-
-        rate=''
-
-        return rate
-
-    def ProcessToReport(self):
-        report={}
-        for key,items in self.result_dic:
-            if key is 'TotalFeeCount':
-                total_fee,total_count=items
-            else:
-                report[key]=items
-        pass_rate=self.CaculatePassRate()
-        report['pass_rate']=pass_rate
-
-
-    def insert(self):
-        if self.result_dic:
-            sql='''insert into at_tc_dbcmp_result   '''
 
 
 
