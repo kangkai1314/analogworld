@@ -1,15 +1,15 @@
 #--*-- coding:utf-8 --*--
 CmpDict={}
-from apps.dbcmp import *
 
+import dbcmp
+import datetime
+import threading
 
 class ComparasionResult():
 
     def __init__(self,table_name):
         self.table_name=table_name
         self.result_dic={ v:k for k,v in CmpDict.items()}
-
-
 
     def CaculatePassRate(self):
 
@@ -32,20 +32,21 @@ class ComparasionResult():
         if self.result_dic:
             sql='''insert into at_tc_dbcmp_result   '''
 
-
 class Compare(ComparasionResult):
-    def __init__(self,table_name):
-        ComparasionResult.__init__(table_name)
+    def __init__(self,table_name,flag):
+        ComparasionResult.__init__(self,table_name)
         self.table_name=table_name#table_name:dr_ggprs_770_20170809
         self.builder=None
+        self.flag=flag
+        self.threadlst=[]
 
     def checkTable(self):
+        print self.table_name
         if any([self.table_name]):
             return True
 
     def construct_compare(self,*args,**kwargs):
         raise NotImplementedError
-
 
     def build_table(self):
 
@@ -54,20 +55,23 @@ class Compare(ComparasionResult):
         :return: tablenamelst like [dr_gsm_770_201804]
         '''
         try:
-            busi=self.get_busi_type()
-            day=self.get_curr_days()
+            busi=self.get_busi_type
+            day=self.get_curr_days
         except Exception:
             raise  Exception('build table failed cause by day or busi')
 
         if any([busi,day]):
-            table_str=self.table_name+day
+            table_splitor='_'
+            table_str='dr_'+busi
+            print table_str
             if busi=='gsm' or busi=='ggprs':
-                all_region_codes=[]
-                return [table_str+i for i in all_region_codes]
+                all_region_codes=['770']
+                return [table_str+table_splitor+i+table_splitor+day for i in all_region_codes]
             else:
-                return [table_str]
+                return [table_str+table_splitor+day]
         else:
             return []
+
     @property
     def get_busi_type(self):
         '''
@@ -128,7 +132,8 @@ class Compare(ComparasionResult):
             raise Exception('current table name is null')
 
     def run(self):
-        content = self.build_compare_content()
+        table=self.build_table()
+        content = self.build_compare_content(table)
         if content:
             for k in content:
                 ret = k.run()
@@ -143,36 +148,51 @@ class Compare(ComparasionResult):
                 update_sql.execute()
         return True
 
-    def build_compare_content(self):
+    def build_compare_content(self,table):
         raise NotImplementedError
 
+class Manager(object):
+    def __init__(self,threadlst):
+
+    def run(self):
 
 class DbCompare(Compare):
-    def __init__(self,table_name):
-        Compare.__init__(table_name)
+    def __init__(self,table_name,flag):
+        Compare.__init__(self,table_name,flag)
         self.type=1
 
     def construct_compare(self):
-        self.builder=Builder(self.table_name)
+        self.builder=dbcmp.Builder(self.table_name)
         self.builder.config_dbcompare()
-
 
     @property
     def compare(self):
         return self.builder
 
-    def build_compare_content(self):
+    def build_compare_content(self,table_name):
         content=dict(
-        totalfeecount = TotalFeeCount(self.table_name),
-        consistentfeecount = ConsistentFeeCount(self.table_name),
-        oldmorefeecount = OldMoreFeeCount(self.table_name),
-        newmorefeecount = NewMoreFeeCount(self.table_name),
-        unconsistentcount = UnconsistentCount(self.table_name),
-        unconsistentfee = UnconsistentFee(self.table_name)
+        totalfeecount = dbcmp.TotalFeeCount(table_name,self.flag),
+        consistentfeecount = dbcmp.ConsistentFeeCount(table_name),
+        oldmorefeecount = dbcmp.OldMoreFeeCount(table_name),
+        newmorefeecount = dbcmp.NewMoreFeeCount(table_name),
+        unconsistentcount = dbcmp.UnconsistentCount(table_name),
+        unconsistentfee = dbcmp.UnconsistentFee(table_name,self.flag)
         )
         return content
 
-
+    def run(self):
+        try:
+            table=self.build_table()[0]
+            content=self.build_compare_content(table)
+        except Exception as e:
+            raise Exception('get compare content is failed')
+        for c in content:
+            func=content[c]
+            t=threading.Thread(target=func.run)
+            self.threadlst.append(t)
+        for t in self.threadlst:
+            print t.name
+            t.run()
 
 
 class MdbCompare(Compare):
@@ -182,27 +202,25 @@ class MdbCompare(Compare):
     def run(self,*agrs,**kwargs):
         self.build_table(cls=Compare)
 
-    def build_compare_content(self):
+    def build_compare_content(self,table_name):
+
         content = dict(
-            totalfeecount=TotalFeeCount(self.table_name),
-            consistentfeecount=ConsistentFeeCount(self.table_name),
-            oldmorefeecount=OldMoreFeeCount(self.table_name),
-            newmorefeecount=NewMoreFeeCount(self.table_name),
-            unconsistentcount=UnconsistentCount(self.table_name),
-            unconsistentfee=UnconsistentFee(self.table_name)
+            totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag),
+            consistentfeecount=dbcmp.ConsistentFeeCount(table_name),
+            oldmorefeecount=dbcmp.OldMoreFeeCount(table_name),
+            newmorefeecount=dbcmp.NewMoreFeeCount(table_name),
+            unconsistentcount=dbcmp.UnconsistentCount(table_name),
+            unconsistentfee=dbcmp.UnconsistentFee(table_name, self.flag)
         )
         return content
-
-
 
 class UploadCompare(Compare):
-    def __init__(self,table_name):
-        Compare.__init__(table_name)
+    def __init__(self,table_name,flag):
+        Compare.__init__(table_name,flag)
 
-
-    def build_compare_content(self):
+    def build_compare_content(self,table_name):
+        table_name = self.build_table()[0]
         content = dict(
-            totalfeecount=TotalFeeCount(self.table_name)
+            totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag)
         )
         return content
-

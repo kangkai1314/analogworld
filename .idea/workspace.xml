@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="435edcc9-ecd2-4971-9b36-ff73005bc228" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_dbcompare.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/compare.py" afterPath="$PROJECT_DIR$/apps/compare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/dbcmp.py" afterPath="$PROJECT_DIR$/apps/dbcmp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/namedTuple.py" afterPath="$PROJECT_DIR$/apps/namedTuple.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/design" afterPath="$PROJECT_DIR$/docs/design" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_dbcompare.py" afterPath="$PROJECT_DIR$/test/test_dbcompare.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,13 +23,13 @@
     <SUITE FILE_PATH="coverage/analogworld$mainpage.coverage" NAME="mainpage Coverage Results" MODIFIED="1524038550356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui/page" />
     <SUITE FILE_PATH="coverage/analogworld$login.coverage" NAME="login Coverage Results" MODIFIED="1524902777834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$match.coverage" NAME="match Coverage Results" MODIFIED="1525253953263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
-    <SUITE FILE_PATH="coverage/analogworld$Unittests_in_test_dbcompare_py.coverage" NAME="Unittests in test_dbcompare.py Coverage Results" MODIFIED="1525854142617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/analogworld$Unittests_in_test_dbcompare_py.coverage" NAME="Unittests in test_dbcompare.py Coverage Results" MODIFIED="1525944644264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/analogworld$client4.coverage" NAME="client4 Coverage Results" MODIFIED="1524130874211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/practice" />
-    <SUITE FILE_PATH="coverage/analogworld$compare.coverage" NAME="compare Coverage Results" MODIFIED="1525849105846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
+    <SUITE FILE_PATH="coverage/analogworld$compare.coverage" NAME="compare Coverage Results" MODIFIED="1525941831973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$user.coverage" NAME="user Coverage Results" MODIFIED="1524211031185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$kangkai1.coverage" NAME="kangkai1 Coverage Results" MODIFIED="1524139681977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/practice" />
-    <SUITE FILE_PATH="coverage/analogworld$dbcmp.coverage" NAME="dbcmp Coverage Results" MODIFIED="1525853342067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
-    <SUITE FILE_PATH="coverage/analogworld$namedTuple.coverage" NAME="namedTuple Coverage Results" MODIFIED="1525858030767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
+    <SUITE FILE_PATH="coverage/analogworld$namedTuple.coverage" NAME="namedTuple Coverage Results" MODIFIED="1525939476385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
+    <SUITE FILE_PATH="coverage/analogworld$dbcmp.coverage" NAME="dbcmp Coverage Results" MODIFIED="1525939607728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$world.coverage" NAME="world Coverage Results" MODIFIED="1524729486184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$consts.coverage" NAME="consts Coverage Results" MODIFIED="1523533821500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/analogworld$server.coverage" NAME="server Coverage Results" MODIFIED="1524038546811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
@@ -41,263 +40,60 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tabdef1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
-              <folding>
-                <element signature="e#22#36#0" expanded="true" />
-                <element signature="e#1054#2160#0" expanded="false" />
-                <element signature="e#2195#2321#0" expanded="false" />
-                <element signature="e#2352#2474#0" expanded="false" />
-                <element signature="e#2533#3080#0" expanded="false" />
-                <element signature="e#3299#9681#0" expanded="false" />
-                <element signature="e#9710#12349#0" expanded="false" />
-                <element signature="e#12373#22033#0" expanded="false" />
-                <element signature="e#22064#23118#0" expanded="false" />
-                <element signature="e#23237#25079#0" expanded="false" />
-                <element signature="e#25118#27203#0" expanded="false" />
-                <element signature="e#27234#28973#0" expanded="false" />
-                <element signature="e#29006#31668#0" expanded="false" />
-                <element signature="e#31700#32778#0" expanded="false" />
-                <element signature="e#32811#33867#0" expanded="false" />
-                <element signature="e#33890#36179#0" expanded="false" />
-                <element signature="e#36204#36549#0" expanded="false" />
-                <element signature="e#36582#45089#0" expanded="false" />
-                <element signature="e#36582#36633#0" expanded="false" />
-                <element signature="e#47029#48874#0" expanded="false" />
-                <element signature="e#48902#51235#0" expanded="false" />
-                <element signature="e#51263#153893#0" expanded="false" />
-                <element signature="e#51396#52432#0" expanded="false" />
-                <element signature="e#52474#52896#0" expanded="false" />
-                <element signature="e#53082#53549#0" expanded="false" />
-                <element signature="e#53589#55124#0" expanded="false" />
-                <element signature="e#55171#55859#0" expanded="false" />
-                <element signature="e#55929#60513#0" expanded="false" />
-                <element signature="e#60561#61053#0" expanded="false" />
-                <element signature="e#61109#62949#0" expanded="false" />
-                <element signature="e#63022#63274#0" expanded="false" />
-                <element signature="e#63333#63389#0" expanded="false" />
-                <element signature="e#63449#63788#0" expanded="false" />
-                <element signature="e#63884#64457#0" expanded="false" />
-                <element signature="e#64504#64904#0" expanded="false" />
-                <element signature="e#64961#65137#0" expanded="false" />
-                <element signature="e#65191#65574#0" expanded="false" />
-                <element signature="e#65670#67317#0" expanded="false" />
-                <element signature="e#67416#68371#0" expanded="false" />
-                <element signature="e#68439#68653#0" expanded="false" />
-                <element signature="e#68689#69306#0" expanded="false" />
-                <element signature="e#69376#70318#0" expanded="false" />
-                <element signature="e#70361#70775#0" expanded="false" />
-                <element signature="e#70815#71464#0" expanded="false" />
-                <element signature="e#71506#71997#0" expanded="false" />
-                <element signature="e#72041#73291#0" expanded="false" />
-                <element signature="e#73336#74765#0" expanded="false" />
-                <element signature="e#74814#78787#0" expanded="false" />
-                <element signature="e#78848#79784#0" expanded="false" />
-                <element signature="e#79832#79869#0" expanded="false" />
-                <element signature="e#79929#81372#0" expanded="false" />
-                <element signature="e#81422#84465#0" expanded="false" />
-                <element signature="e#84529#85051#0" expanded="false" />
-                <element signature="e#85115#89977#0" expanded="false" />
-                <element signature="e#90055#91139#0" expanded="false" />
-                <element signature="e#91372#92897#0" expanded="false" />
-                <element signature="e#92945#94724#0" expanded="false" />
-                <element signature="e#94780#96160#0" expanded="false" />
-                <element signature="e#96207#97096#0" expanded="false" />
-                <element signature="e#97160#101802#0" expanded="false" />
-                <element signature="e#154256#154364#0" expanded="false" />
-                <element signature="e#154403#154565#0" expanded="false" />
-                <element signature="e#154606#154898#0" expanded="false" />
-                <element signature="e#154951#155723#0" expanded="false" />
-                <element signature="e#155810#156555#0" expanded="false" />
-                <element signature="e#156631#157422#0" expanded="false" />
-                <element signature="e#157505#158419#0" expanded="false" />
-                <element signature="e#158465#158687#0" expanded="false" />
-                <element signature="e#158721#159266#0" expanded="false" />
-                <element signature="e#159379#166894#0" expanded="false" />
-                <element signature="e#166990#167907#0" expanded="false" />
-                <element signature="e#167997#168178#0" expanded="false" />
-                <element signature="e#168276#168736#0" expanded="false" />
-                <element signature="e#168850#177960#0" expanded="false" />
-                <element signature="e#178002#178109#0" expanded="false" />
-                <element signature="e#178274#179420#0" expanded="false" />
-                <element signature="e#179579#180699#0" expanded="false" />
-                <element signature="e#180908#182210#0" expanded="false" />
-                <element signature="e#182389#183425#0" expanded="false" />
-                <element signature="e#183482#183993#0" expanded="false" />
-                <element signature="e#184302#188060#0" expanded="false" />
-                <element signature="e#188820#190968#0" expanded="false" />
-                <element signature="e#191090#191500#0" expanded="false" />
-                <element signature="e#191609#196130#0" expanded="false" />
-                <element signature="e#196161#196234#0" expanded="false" />
-                <element signature="e#196498#198010#0" expanded="false" />
-                <element signature="e#198072#198853#0" expanded="false" />
-                <element signature="e#198890#199407#0" expanded="false" />
-                <element signature="e#199454#200261#0" expanded="false" />
-                <element signature="e#200309#201803#0" expanded="false" />
-                <element signature="e#201855#203544#0" expanded="false" />
-                <element signature="e#203629#207733#0" expanded="false" />
-                <element signature="e#207785#208920#0" expanded="false" />
-                <element signature="e#209009#211956#0" expanded="false" />
-                <element signature="e#216520#217358#0" expanded="false" />
-                <marker date="1525252404014" expanded="true" signature="10255:10291" ph="select tabna... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="34151:34220" ph="select host,... dba_db_links" />
-                <marker date="1525252404014" expanded="true" signature="35335:35407" ph="select lower... all_all_tablesmissing_value" />
-                <marker date="1525252404014" expanded="true" signature="35619:35684" ph="select host,... dba_db_links" />
-                <marker date="1525252404014" expanded="true" signature="38437:38544" ph="select para_... at_sys_base_para" />
-                <marker date="1525252404014" expanded="true" signature="38686:38787" ph="select para_... at_sys_base_para" />
-                <marker date="1525252404014" expanded="true" signature="42245:42348" ph="select dbuse... at_tc_dbuser_def" />
-                <marker date="1525252404014" expanded="true" signature="42505:42608" ph="select dbuse... at_tc_dbuser_def" />
-                <marker date="1525252404014" expanded="true" signature="43185:43237" ph="select disti... at_sys_operator_info" />
-                <marker date="1525252404014" expanded="true" signature="43732:43898" ph="select curr_... at_tc_table_names_map" />
-                <marker date="1525252404014" expanded="true" signature="44560:44711" ph="insert into at_tc_table_names_map... " />
-                <marker date="1525252404014" expanded="true" signature="46330:46404" ph="select to_ch... at_tc_task" />
-                <marker date="1525252404014" expanded="true" signature="52591:52629" ph="select busi_... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="53157:53254" ph="select busi_... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="57971:58083" ph="select lower... all_tab_columnsmissing_value" />
-                <marker date="1525252404014" expanded="true" signature="60569:60641" ph="select lower... at_tv_tab_define" />
-                <marker date="1525252404014" expanded="true" signature="61175:61545" ph="select lower... at_tc_dbcmp_tabsinfo" />
-                <marker date="1525252404014" expanded="true" signature="61723:62108" ph="select lower... at_tc_dbcmp_tabsinfo" />
-                <marker date="1525252404014" expanded="true" signature="62294:62695" ph="select lower... at_tc_dbcmp_tabsinfo" />
-                <marker date="1525252404014" expanded="true" signature="65699:66129" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
-                <marker date="1525252404014" expanded="true" signature="65991:66074" ph="select disti... at_tc_busi_compared_tables" />
-                <marker date="1525252404014" expanded="true" signature="66352:66799" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
-                <marker date="1525252404014" expanded="true" signature="66662:66745" ph="select disti... at_tc_busi_compared_tables" />
-                <marker date="1525252404014" expanded="true" signature="67423:67624" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
-                <marker date="1525252404014" expanded="true" signature="67506:67589" ph="select disti... at_tc_busi_compared_tables" />
-                <marker date="1525252404014" expanded="true" signature="67787:67915" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
-                <marker date="1525252404014" expanded="true" signature="80542:80553" ph="drop table m... " />
-                <marker date="1525252404014" expanded="true" signature="80626:80637" ph="drop table m... " />
-                <marker date="1525252404014" expanded="true" signature="84646:84714" ph="select colum... all_tab_colsmissing_value" />
-                <marker date="1525252404014" expanded="true" signature="91401:91519" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="91537:91652" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="91670:91786" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="91804:91920" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="92974:93107" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="93125:93256" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="93274:93406" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="94809:94969" ph="insert into at_tc_dbcmp_diff_detail... " />
-                <marker date="1525252404014" expanded="true" signature="94987:95143" ph="insert into at_tc_dbcmp_diff_stat... " />
-                <marker date="1525252404014" expanded="true" signature="95161:95318" ph="insert into at_tc_dbcmp_diff_stat1... " />
-                <marker date="1525252404014" expanded="true" signature="95336:95494" ph="insert into at_tc_dbcmp_diff_count... " />
-                <marker date="1525252404014" expanded="true" signature="96238:96339" ph="select err_c... at_tc_ignore_errcode" />
-                <marker date="1525252404014" expanded="true" signature="96495:96596" ph="select err_c... at_tc_ignore_errcode" />
-                <marker date="1525252404014" expanded="true" signature="96751:96852" ph="select err_c... at_tc_ignore_errcode" />
-                <marker date="1525252404014" expanded="true" signature="99873:99896" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="99983:100006" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="100516:100539" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="100631:100654" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="101204:101490" ph="insert into at_tc_dbcmp_diff_count... " />
-                <marker date="1525252404014" expanded="true" signature="101364:101490" ph="select 'miss... dual" />
-                <marker date="1525252404014" expanded="true" signature="104820:104843" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="104933:104956" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="105042:105065" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="105150:105173" ph="select missi... missing_value" />
-                <marker date="1525252404014" expanded="true" signature="105257:105518" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="105994:106060" ph="select tc_id... at_tc" />
-                <marker date="1525252404014" expanded="true" signature="107912:108078" ph="select curr_... at_tc_table_names_map" />
-                <marker date="1525252404014" expanded="true" signature="108837:108988" ph="insert into at_tc_table_names_map... " />
-                <marker date="1525252404014" expanded="true" signature="129723:130376" ph="select %s,di... " />
-                <marker date="1525252404014" expanded="true" signature="130436:131007" ph="select %s,di... " />
-                <marker date="1525252404014" expanded="true" signature="131059:131342" ph="select %s,di... " />
-                <marker date="1525252404014" expanded="true" signature="133525:133866" ph="insert into missing_value... " />
-                <marker date="1525252404014" expanded="true" signature="140071:140397" ph="insert into at_tc_dbcmp_diff_stat... " />
-                <marker date="1525252404014" expanded="true" signature="140249:140397" ph="select 'miss... " />
-                <marker date="1525252404014" expanded="true" signature="141684:142011" ph="insert into at_tc_dbcmp_diff_stat1... " />
-                <marker date="1525252404014" expanded="true" signature="141863:142011" ph="select 'miss... " />
-                <marker date="1525252404014" expanded="true" signature="144799:145072" ph="select key_i... at_tc_dbcmp_diff_stat" />
-                <marker date="1525252404014" expanded="true" signature="152344:152569" ph="insert into at_tc_dbcmp_diff_stat... " />
-                <marker date="1525252404014" expanded="true" signature="154411:154458" ph="select root_... at_tc" />
-                <marker date="1525252404014" expanded="true" signature="154613:154660" ph="select statu... at_tc_task_tc" />
-                <marker date="1525252404014" expanded="true" signature="154996:155177" ph="select statu... at_tc_task_tc" />
-                <marker date="1525252404014" expanded="true" signature="158784:158906" ph="select lower... at_sys_base_para" />
-                <marker date="1525252404014" expanded="true" signature="168974:169070" ph="select objec... at_sys_obj_define" />
-                <marker date="1525252404014" expanded="true" signature="183557:183633" ph="select date_... at_tc_data_prepare_date" />
-                <marker date="1525252404014" expanded="true" signature="198079:198179" ph="select env_v... at_tc_sysenv" />
-                <marker date="1525252404014" expanded="true" signature="198897:198953" ph="select busi_... at_tc" />
-                <marker date="1525252404014" expanded="true" signature="199156:199224" ph="select count... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="199461:199528" ph="select busi_... at_tc" />
-                <marker date="1525252404014" expanded="true" signature="199760:199909" ph="select total... at_tc_process_result" />
-                <marker date="1525252404014" expanded="true" signature="200526:200714" ph="insert into at_tc_dz_time... " />
-                <marker date="1525252404014" expanded="true" signature="201538:201684" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="201896:201939" ph="select root_... at_tc" />
-                <marker date="1525252404014" expanded="true" signature="202107:202167" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="202225:202284" ph="delete from " />
-                <marker date="1525252404014" expanded="true" signature="202342:202409" ph="select table... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="202619:202805" ph="select 'trun... all_all_tables" />
-                <marker date="1525252404014" expanded="true" signature="202916:203052" ph="select 'trun... all_all_tables" />
-                <marker date="1525252404014" expanded="true" signature="203806:203853" ph="select runty... at_tc_task" />
-                <marker date="1525252404014" expanded="true" signature="204296:204466" ph="select table... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="205101:205210" ph="select sql_p... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="205919:206023" ph="select sql f... " />
-                <marker date="1525252404014" expanded="true" signature="206780:206895" ph="select proce... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="208002:208186" ph="insert into at_tc_dz_time... " />
-                <marker date="1525252404014" expanded="true" signature="208655:208801" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="209304:209461" ph="select table... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="210902:211017" ph="select proce... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="212222:212406" ph="insert into at_tc_dz_time... " />
-                <marker date="1525252404014" expanded="true" signature="212930:213000" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="213145:213291" ph="update at_tc... " />
-                <marker date="1525252404014" expanded="true" signature="213791:213953" ph="select table... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="215394:215509" ph="select proce... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="217524:217648" ph="select lower... at_sys_base_para" />
-                <marker date="1525252404014" expanded="true" signature="218419:218534" ph="select disti... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="220016:220122" ph="select table... at_tc_compared_table_selected" />
-                <marker date="1525252404014" expanded="true" signature="220439:220554" ph="select proce... at_tc_compared_table_selected" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="namedTuple.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="88" column="22" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+            <state relative-caret-position="218">
+              <caret line="139" column="20" lean-forward="false" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
               <folding>
                 <element signature="e#26#60#0" expanded="true" />
-                <element signature="e#145#478#0" expanded="false" />
-                <element signature="e#505#586#0" expanded="false" />
-                <element signature="e#687#737#0" expanded="false" />
-                <element signature="e#763#1381#0" expanded="false" />
+                <element signature="e#166#499#0" expanded="false" />
+                <element signature="e#526#607#0" expanded="false" />
+                <element signature="e#708#758#0" expanded="false" />
+                <element signature="e#784#1402#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18715">
-              <caret line="985" column="15" lean-forward="false" selection-start-line="985" selection-start-column="8" selection-end-line="985" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbcmp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbcmp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
-              <caret line="119" column="23" lean-forward="true" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+            <state relative-caret-position="-2699">
+              <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
               <folding>
-                <element signature="e#43#59#0" expanded="true" />
-                <element signature="e#140#326#0" expanded="false" />
-                <marker date="1525859089373" expanded="true" signature="459:480" ph="select count... missing_value" />
-                <marker date="1525859089373" expanded="true" signature="906:927" ph="select count... missing_value" />
-                <marker date="1525859089373" expanded="true" signature="906:929" ph="select count... " />
-                <marker date="1525859089373" expanded="true" signature="2176:2245" ph="select count... missing_value" />
-                <marker date="1525859089373" expanded="true" signature="2389:2420" ph="select count... missing_value" />
-                <marker date="1525859089373" expanded="true" signature="2888:2971" ph="create table... as" />
-                <marker date="1525859089373" expanded="true" signature="2905:2970" ph="select * fro... ud_old." />
-                <marker date="1525859089373" expanded="true" signature="3763:3822" ph="select count... missing_value" />
-                <marker date="1525859089373" expanded="true" signature="3763:3827" ph="select count... tmp" />
-                <marker date="1525859089373" expanded="true" signature="4329:4418" ph="create table... missing_valueas" />
-                <marker date="1525859089373" expanded="true" signature="4745:4804" ph="select count... tmp" />
-                <marker date="1525859089373" expanded="true" signature="4745:4809" ph="select count... tmp" />
+                <element signature="e#26#41#1" expanded="false" />
+                <element signature="e#42#58#0" expanded="true" />
+                <element signature="e#171#357#0" expanded="false" />
+                <element signature="e#405#795#0" expanded="false" />
+                <element signature="e#825#1296#0" expanded="false" />
+                <element signature="e#1327#1817#0" expanded="false" />
+                <element signature="e#1846#2072#0" expanded="false" />
+                <marker date="1525944644212" expanded="true" signature="489:510" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="934:955" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="934:957" ph="select count... " />
+                <marker date="1525944644212" expanded="true" signature="1402:1423" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="3463:3532" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="3681:3712" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="4418:4510" ph="create table... as" />
+                <marker date="1525944644212" expanded="true" signature="4436:4509" ph="select * fro... ud_old." />
+                <marker date="1525944644212" expanded="true" signature="4822:4891" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="5934:5993" ph="select count... missing_value" />
+                <marker date="1525944644212" expanded="true" signature="5934:5998" ph="select count... tmp" />
+                <marker date="1525944644212" expanded="true" signature="6477:6566" ph="create table... missing_valueas" />
+                <marker date="1525944644212" expanded="true" signature="6893:6952" ph="select count... tmp" />
+                <marker date="1525944644212" expanded="true" signature="6893:6957" ph="select count... tmp" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -312,16 +108,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compare.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/compare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="-808">
+              <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
               <folding>
-                <element signature="e#96#707#0" expanded="false" />
-                <element signature="e#2353#3780#0" expanded="false" />
-                <marker date="1525852163395" expanded="true" signature="671:701" ph="insert into at_tc_dbcmp_result... " />
-                <marker date="1525852163395" expanded="true" signature="2200:2239" ph="delete from " />
+                <element signature="e#38#50#0" expanded="true" />
+                <element signature="e#766#4556#0" expanded="false" />
+                <element signature="e#810#996#0" expanded="false" />
+                <element signature="e#1032#1112#0" expanded="false" />
+                <element signature="e#1233#1946#0" expanded="false" />
+                <element signature="e#1233#1356#1" expanded="false" />
+                <element signature="e#1999#2212#0" expanded="false" />
+                <element signature="e#2265#2336#0" expanded="false" />
+                <element signature="e#2368#2505#0" expanded="false" />
+                <element signature="e#4328#4478#0" expanded="false" />
+                <marker date="1525945158438" expanded="true" signature="690:720" ph="insert into at_tc_dbcmp_result... " />
+                <marker date="1525945158438" expanded="true" signature="2407:2446" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -330,12 +134,12 @@
       <file leaf-file-name="test_dbcompare.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+            <state relative-caret-position="988">
+              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="e#26#41#0" expanded="true" />
-                <marker date="1525854142272" expanded="true" signature="378:426" ph="select count... More_dr_ggprs_20141222_7720" />
-                <marker date="1525854142272" expanded="true" signature="378:427" ph="select * fro... at_tc_task" />
+                <marker date="1525944195964" expanded="true" signature="379:427" ph="select count... More_dr_ggprs_20141222_7720" />
+                <marker date="1525944195964" expanded="true" signature="379:428" ph="select * fro... at_tc_task" />
               </folding>
             </state>
           </provider>
@@ -344,7 +148,7 @@
       <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6639">
+            <state relative-caret-position="5529">
               <caret line="291" column="13" lean-forward="false" selection-start-line="291" selection-start-column="8" selection-end-line="291" selection-end-column="13" />
               <folding>
                 <marker date="1525848755048" expanded="true" signature="3314:3335" ph="select count... missing_value" />
@@ -371,11 +175,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="design" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/design">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="functools.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/functools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="760">
+              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -398,6 +212,7 @@
       <find>super()</find>
       <find>prints</find>
       <find>print</find>
+      <find>run</find>
     </findStrings>
     <replaceStrings>
       <replace>CheckMessage</replace>
@@ -439,12 +254,12 @@
         <option value="$PROJECT_DIR$/module/client.py" />
         <option value="$PROJECT_DIR$/module/event.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/docs/design" />
         <option value="$PROJECT_DIR$/utils/db.py" />
-        <option value="$PROJECT_DIR$/apps/compare.py" />
-        <option value="$PROJECT_DIR$/test/test_dbcompare.py" />
+        <option value="$PROJECT_DIR$/docs/design" />
         <option value="$PROJECT_DIR$/apps/namedTuple.py" />
+        <option value="$PROJECT_DIR$/test/test_dbcompare.py" />
         <option value="$PROJECT_DIR$/apps/dbcmp.py" />
+        <option value="$PROJECT_DIR$/apps/compare.py" />
       </list>
     </option>
   </component>
@@ -475,7 +290,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -526,12 +340,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analogworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analogworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,7 +401,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.namedTuple">
+  <component name="RunManager" selected="Python tests.Unittests in test_dbcompare.py">
     <configuration default="false" name="match" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -822,10 +651,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.namedTuple" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_dbcompare.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_dbcompare.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.compare" />
         <item index="2" class="java.lang.String" itemvalue="Python.dbcmp" />
-        <item index="3" class="java.lang.String" itemvalue="Python.compare" />
+        <item index="3" class="java.lang.String" itemvalue="Python.namedTuple" />
         <item index="4" class="java.lang.String" itemvalue="Python.match" />
       </list>
     </recent_temporary>
@@ -844,51 +673,50 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 15h 56m 21s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 16h 58m 45s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 07m 20s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 02m 49s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 07m 55s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 03m 10s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 08m 26s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 03m 38s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 09m 07s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 05m 11s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 10m 13s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 06m 08s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 14m 52s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 15m 13s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 15m 07s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 22m 48s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 15m 32s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 23m 21s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.09 at 16h 22m 23s.xml">
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.10 at 17h 30m 50s.xml">
       <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23660031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23660031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5352349" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3647059" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -900,23 +728,23 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.301059" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52100843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23660031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5352349" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3647059" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -929,23 +757,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/imageprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/world.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,6 +899,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#39#0" expanded="false" />
+            <element signature="e#209#361#0" expanded="false" />
+            <element signature="e#388#485#1" expanded="false" />
+            <element signature="e#642#780#0" expanded="false" />
+            <element signature="e#1913#2405#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,6 +934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,6 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1218,14 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/design">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18715">
@@ -1236,10 +1061,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="5776">
           <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
           <folding>
-            <element signature="e#22#36#0" expanded="true" />
+            <element signature="e#22#36#0" expanded="false" />
             <element signature="e#1054#2160#0" expanded="false" />
             <element signature="e#2195#2321#0" expanded="false" />
             <element signature="e#2352#2474#0" expanded="false" />
@@ -1442,6 +1267,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/functools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/design">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/imageprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1450,9 +1291,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="139" column="20" lean-forward="false" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#60#0" expanded="true" />
+            <element signature="e#166#499#0" expanded="false" />
+            <element signature="e#526#607#0" expanded="false" />
+            <element signature="e#708#758#0" expanded="false" />
+            <element signature="e#784#1402#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="e#26#41#0" expanded="true" />
+            <marker date="1525944195964" expanded="true" signature="379:427" ph="select count... More_dr_ggprs_20141222_7720" />
+            <marker date="1525944195964" expanded="true" signature="379:428" ph="select * fro... at_tc_task" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6639">
+        <state relative-caret-position="5529">
           <caret line="291" column="13" lean-forward="false" selection-start-line="291" selection-start-column="8" selection-end-line="291" selection-end-column="13" />
           <folding>
             <marker date="1525848755048" expanded="true" signature="3314:3335" ph="select count... missing_value" />
@@ -1468,80 +1351,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_modules.py">
+    <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/functools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        <state relative-caret-position="-2699">
+          <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding>
-            <element signature="e#26#41#0" expanded="true" />
-            <marker date="1525854142272" expanded="true" signature="378:426" ph="select count... More_dr_ggprs_20141222_7720" />
-            <marker date="1525854142272" expanded="true" signature="378:427" ph="select * fro... at_tc_task" />
+            <element signature="e#26#41#1" expanded="false" />
+            <element signature="e#42#58#0" expanded="true" />
+            <element signature="e#171#357#0" expanded="false" />
+            <element signature="e#405#795#0" expanded="false" />
+            <element signature="e#825#1296#0" expanded="false" />
+            <element signature="e#1327#1817#0" expanded="false" />
+            <element signature="e#1846#2072#0" expanded="false" />
+            <marker date="1525944644212" expanded="true" signature="489:510" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="934:955" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="934:957" ph="select count... " />
+            <marker date="1525944644212" expanded="true" signature="1402:1423" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="3463:3532" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="3681:3712" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="4418:4510" ph="create table... as" />
+            <marker date="1525944644212" expanded="true" signature="4436:4509" ph="select * fro... ud_old." />
+            <marker date="1525944644212" expanded="true" signature="4822:4891" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="5934:5993" ph="select count... missing_value" />
+            <marker date="1525944644212" expanded="true" signature="5934:5998" ph="select count... tmp" />
+            <marker date="1525944644212" expanded="true" signature="6477:6566" ph="create table... missing_valueas" />
+            <marker date="1525944644212" expanded="true" signature="6893:6952" ph="select count... tmp" />
+            <marker date="1525944644212" expanded="true" signature="6893:6957" ph="select count... tmp" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/compare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="-808">
+          <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
           <folding>
-            <element signature="e#96#707#0" expanded="false" />
-            <element signature="e#2353#3780#0" expanded="false" />
-            <marker date="1525852163395" expanded="true" signature="671:701" ph="insert into at_tc_dbcmp_result... " />
-            <marker date="1525852163395" expanded="true" signature="2200:2239" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="88" column="22" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
-          <folding>
-            <element signature="e#26#60#0" expanded="true" />
-            <element signature="e#145#478#0" expanded="false" />
-            <element signature="e#505#586#0" expanded="false" />
-            <element signature="e#687#737#0" expanded="false" />
-            <element signature="e#763#1381#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="119" column="23" lean-forward="true" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
-          <folding>
-            <element signature="e#43#59#0" expanded="true" />
-            <element signature="e#140#326#0" expanded="false" />
-            <marker date="1525859089373" expanded="true" signature="459:480" ph="select count... missing_value" />
-            <marker date="1525859089373" expanded="true" signature="906:927" ph="select count... missing_value" />
-            <marker date="1525859089373" expanded="true" signature="906:929" ph="select count... " />
-            <marker date="1525859089373" expanded="true" signature="2176:2245" ph="select count... missing_value" />
-            <marker date="1525859089373" expanded="true" signature="2389:2420" ph="select count... missing_value" />
-            <marker date="1525859089373" expanded="true" signature="2888:2971" ph="create table... as" />
-            <marker date="1525859089373" expanded="true" signature="2905:2970" ph="select * fro... ud_old." />
-            <marker date="1525859089373" expanded="true" signature="3763:3822" ph="select count... missing_value" />
-            <marker date="1525859089373" expanded="true" signature="3763:3827" ph="select count... tmp" />
-            <marker date="1525859089373" expanded="true" signature="4329:4418" ph="create table... missing_valueas" />
-            <marker date="1525859089373" expanded="true" signature="4745:4804" ph="select count... tmp" />
-            <marker date="1525859089373" expanded="true" signature="4745:4809" ph="select count... tmp" />
+            <element signature="e#38#50#0" expanded="true" />
+            <element signature="e#766#4556#0" expanded="false" />
+            <element signature="e#810#996#0" expanded="false" />
+            <element signature="e#1032#1112#0" expanded="false" />
+            <element signature="e#1233#1946#0" expanded="false" />
+            <element signature="e#1233#1356#1" expanded="false" />
+            <element signature="e#1999#2212#0" expanded="false" />
+            <element signature="e#2265#2336#0" expanded="false" />
+            <element signature="e#2368#2505#0" expanded="false" />
+            <element signature="e#4328#4478#0" expanded="false" />
+            <marker date="1525945158438" expanded="true" signature="690:720" ph="insert into at_tc_dbcmp_result... " />
+            <marker date="1525945158438" expanded="true" signature="2407:2446" ph="delete from " />
           </folding>
         </state>
       </provider>
