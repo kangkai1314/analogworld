@@ -3,6 +3,7 @@ from collections import namedtuple
 from functools import partial,wraps
 import threading
 import datetime,time
+import inspect
 
 class NamedTuple(tuple):
 
@@ -115,8 +116,66 @@ class Msg(object):
 
 
 
+class Threadmanager(threading.Thread):
+    def __init__(self,arg):
+        super(Threadmanager,self).__init__()
+        self.arg=arg
+
+    def get_current_class(self):
+        return inspect.stack()[1][3]
+
+    def run(self):
+        print 'get current class '
+        print self.get_current_class()
+        print self.name
+        time.sleep(10)
+        if self.isAlive():
+            print '%s is running'%(self.name)
+
+class Tmanager(object):
+    def __init__(self,threadlst):
+        self.threadlst=threadlst
+
+    def start(self):
+        t=threading.Thread(target=self.run)
+        t.start()
+        t.join()
+
+    def run(self):
+        for t in self.threadlst:
+            t.start()
+
+        while self.threadlst!=[]:
+            for t in self.threadlst:
+                if t.isAlive():
+                    continue
+                else:
+                    self.threadlst.remove(t)
+            print 'current threads %s'%(str(self.threadlst))
+            time.sleep(10)
+
+global resultdict
+resultdict={}
 
 
+def sleeps(sec,result,lock):
+    lock.acquire()
+    print 'add lock'
+    global sum
+    sum=0
+    time.sleep(sec)
+    sum+=sec
+    resultdict[str(sec)] = sum
+    lock.release()
+    print 'release lock'
+
+def produceThreads():
+    threadlst=[]
+    lock=threading.RLock()
+    for i in range(10):
+        t=threading.Thread(target=sleeps,args=(i+1,resultdict,lock))
+        threadlst.append(t)
+    return threadlst
 
 
 def main():
@@ -138,6 +197,20 @@ def main():
     cost=t2-t1
     print cost
     print type(cost)
+    s=Threadmanager('add')
+    print Threadmanager.__name__
+    s.run()
+    tlst=produceThreads()
+    tm=Tmanager(tlst)
+    tm.run()
+    print resultdict
+    key='1'
+    ls='hello'
+    ll=dict([key,ls])
+    print ll
+
+
+
 
 
 

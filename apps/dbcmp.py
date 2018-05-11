@@ -5,6 +5,7 @@ db比对算法
 '''
 import threading
 import datetime,time
+import inspect
 from apps.compare import *
 from functools import wraps
 from utils.db import DBObj
@@ -79,6 +80,13 @@ class Sql(object):
         self.table_name=table_name
         self.busi=self.get_busi()
         self.dbObj=None
+        self.lock=threading.RLock()
+
+    def __str__(self):
+        return CmpDict[str(self.type)]
+
+    def get_current_class_name(self):
+        return inspect.stack()
 
     def get_busi(self):
         return self.table_name.split('_')[1]
@@ -110,6 +118,19 @@ class Sql(object):
         else:
             raise ValueError('not existed flag ')
 
+    def update_result(self,result,ret):
+        print 'add lock'
+        self.lock.acquire()
+        result.update(ret)
+        self.lock.release()
+        print 'release lock'
+
+    def update_table(self,key,value):
+        self.lock.acquire()
+        update_sql=''''''
+        self.dbObj.execute(update_sql)
+        self.lock.release()
+
 class TotalFeeCount(Sql):
     type=1#话单和费用总数
 
@@ -126,20 +147,36 @@ class TotalFeeCount(Sql):
             base_sql = '''select count(*) from {DB_USER}.{TABLE_NAME}'''.format(DB_USER=self.dbuser, TABLE_NAME=self.table_name)
             return self.flag, base_sql
 
-    @check_table_1
+
     @time_record
-    def run(self):
-        return 100
+    def run(self,result,key):
+        print 'start execute'
         flag,sql=self.generate()
+        print sql
         if sql:
-            ret=self.dbObj.execute(sql)
+            lst,msg=self.dbObj.execute(sql)
+            print lst
+            ret=500
+            re={}
+            re[key]=ret
+            print re
+            self.update_result(result,re)
             return self.flag,ret
+        else:
+            print 'failed'
+
+
+    def process_result(self,lst):
+        pass
+
 
 class ConsistentFeeCount(Sql):
     type=2#一致的话单数和费用
 
     def __init__(self,table_name):
         Sql.__init__(self,table_name)
+        self.flag=0
+        self.dbuser='atptest'
 
     def do_preconditon(self):
         dbinfo=self.get_db()
@@ -154,21 +191,33 @@ class ConsistentFeeCount(Sql):
             raise Exception('build tmp table failed')
 
     def generate(self,):
-        tmp_table=self.do_preconditon()
+        #tmp_table=self.do_preconditon()
+        tmp_table='dr_sms'
         if tmp_table:
             base_sql = '''select count(*), sum(charge1+charge2+charge3+charge4) from {DB_USER}.{TABLE_NAME}'''.format(
             DB_USER=self.dbuser, TABLE_NAME=self.table_name)
         return self.flag, base_sql
 
-    def run(self):
-        return 100
-        sql=self.generate()
-        if sql:
-            lst,msg=self.dbObj.execute(sql)
-            if msg is 'select finshed':
+    def run(self,result,key):
+        '''
+                    if msg is 'select finshed':
                 return lst
             else:
                 raise Exception('run failed ')
+        :param result:
+        :param key:
+        :return:
+        '''
+        sql=self.generate()
+        if sql:
+            #self.dbObj.execute(sql)
+            ret = 500
+            re = {}
+            re[key] = ret
+            print re
+            self.update_result(result, re)
+
+
 
 class OldMoreFeeCount(Sql):
     type=3#旧有新无
@@ -192,13 +241,17 @@ class OldMoreFeeCount(Sql):
             base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {tmp}'''.format(tmp=tmp)
         return base_sql
 
-    def run(self):
-        return 100
+    def run(self,result,key):
+
         sql=self.generate()
         print sql
         if sql:
-            ret=self.dbobj.execute(sql)
-            return ret
+            #ret=self.dbObj.execute(sql)
+            ret = 500
+            re = {}
+            re[key] = ret
+            print re
+            self.update_result(result, re)
 
 class NewMoreFeeCount(Sql):
     type=4
@@ -213,7 +266,9 @@ class NewMoreFeeCount(Sql):
         create_table = '''create table {tmp_tab} as ((select * from {new_table}) minus (select * from {old_table}))'''.format(
             tmp_tab=tmp_table, old_table=old_table, new_table=new_table)
 
-        msg=create_table.excute()
+        msg='success'
+
+        #msg=create_table.excute()
         if msg=='success':
             pass
         else:
@@ -226,12 +281,15 @@ class NewMoreFeeCount(Sql):
             base_sql='''select count(*), sum(charge1+charge2+charge3+charge4) from {tmp}'''.format(tmp=tmp)
         return base_sql
 
-    def run(self):
-        return 100
+    def run(self,result,key):
         sql=self.generate()
         if sql:
-            ret=sql.execute()
-            return ret
+            #ret=self.dbObj.execute()
+            ret = 500
+            re = {}
+            re[key] = ret
+            print re
+            self.update_result(result, re)
 
 class UnconsistentCount(Sql):
     type=5#不一致的条数
@@ -243,8 +301,12 @@ class UnconsistentCount(Sql):
         base_sql=''''''
         return base_sql
 
-    def run(self):
-        return 100
+    def run(self,result,key):
+        ret = 500
+        re = {}
+        re[key] = ret
+        print re
+        self.update_result(result, re)
 
 class UnconsistentFee(Sql):
     type=6#不一致的费用数
@@ -257,9 +319,13 @@ class UnconsistentFee(Sql):
         base_sql=''''''
         return base_sql
 
-    def run(self):
+    def run(self,result,key):
         time.sleep(5)
-        return 1000
+        ret = 500
+        re = {}
+        re[key] = ret
+        print re
+        self.update_result(result, re)
         if True:
             pass
         else:

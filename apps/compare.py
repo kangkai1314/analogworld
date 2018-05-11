@@ -40,6 +40,11 @@ class Compare(ComparasionResult):
         self.flag=flag
         self.threadlst=[]
 
+
+    def init_result_table(self):
+        insert_sql=''''''
+        self.dbobj.execute(insert_sql)
+
     def checkTable(self):
         print self.table_name
         if any([self.table_name]):
@@ -153,13 +158,57 @@ class Compare(ComparasionResult):
 
 class Manager(object):
     def __init__(self,threadlst):
+        self.threadlst=threadlst
+
+    def start(self):
+        t = threading.Thread(target=self.run)
+        t.start()
+        t.join()
 
     def run(self):
+        for t in self.threadlst:
+            t.start()
+        for t in self.threadlst:
+            t.join()
+        while self.threadlst != []:
+            for t in self.threadlst:
+                if t.isAlive():
+                    print t.name
+                    print ('%s is running ') % (t.name)
+                    print ('%s is alive') % (t.name)
+                else:
+                    self.threadlst.remove(t)
+            print 'current threads %s' % (str(self.threadlst))
+
+class ThreadManager(threading.Thread):
+    def __init__(self,threadlst):
+        super(ThreadManager,self).__init__()
+        self.threadlst=threadlst
+        self.lock=threading.RLock()
+
+    def run(self):
+        for t in self.threadlst:
+            t.start()
+
+        for t in self.threadlst:
+            t.join()
+        self.join()
+
+        while self.threadlst != []:
+            for t in self.threadlst:
+                print t.name
+                print ('%s is running ') % (t.name)
+                if t.isAlive():
+                    print ('%s is alive') % (t.name)
+                else:
+                    self.threadlst.remove(t)
 
 class DbCompare(Compare):
     def __init__(self,table_name,flag):
         Compare.__init__(self,table_name,flag)
         self.type=1
+        self.manager=None
+        self.lock=threading.RLock()
 
     def construct_compare(self):
         self.builder=dbcmp.Builder(self.table_name)
@@ -181,6 +230,8 @@ class DbCompare(Compare):
         return content
 
     def run(self):
+        global result
+        result={}
         try:
             table=self.build_table()[0]
             content=self.build_compare_content(table)
@@ -188,11 +239,17 @@ class DbCompare(Compare):
             raise Exception('get compare content is failed')
         for c in content:
             func=content[c]
-            t=threading.Thread(target=func.run)
+            key=func.__str__()
+            t=threading.Thread(target=func.run,args=(result,key))
             self.threadlst.append(t)
-        for t in self.threadlst:
-            print t.name
-            t.run()
+
+        self.manager=Manager(self.threadlst)
+        #self.manager=ThreadManager(self.threadlst)
+        #self.manager.setName('Manager')
+
+        self.manager.run()
+        #self.manager.run()
+        print result
 
 
 class MdbCompare(Compare):

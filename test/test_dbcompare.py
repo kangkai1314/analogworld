@@ -46,7 +46,7 @@ class TestCompare(unittest.TestCase):
 
 
     def test_dbcompare(self):
-        table_name='dr_gsm_$region_code_$specday'
+        table_name='dr_ggprs_$region_code_$specday'
         flag=1
         dbcom=DbCompare(table_name,flag)
         dbcom.build_table()
