@@ -4,6 +4,18 @@ from functools import partial,wraps
 import threading
 import datetime,time
 import inspect
+from threading import current_thread
+import cProfile
+
+class Logger():
+    def __init__(self):
+        self.lock=threading.RLock()
+
+    def prints(self,msg):
+        self.lock.acquire()
+        print msg
+        self.lock.release()
+
 
 class NamedTuple(tuple):
 
@@ -114,6 +126,12 @@ class Msg(object):
     def add(self):
         return True
 
+class ExtMsg(Msg):
+    def __init__(self):
+        super(Msg,self).__init__()
+
+
+
 
 
 class Threadmanager(threading.Thread):
@@ -159,6 +177,8 @@ resultdict={}
 
 
 def sleeps(sec,result,lock):
+    t=threading.current_thread()
+    print t.name
     lock.acquire()
     print 'add lock'
     global sum
@@ -206,8 +226,12 @@ def main():
     print resultdict
     key='1'
     ls='hello'
-    ll=dict([key,ls])
-    print ll
+    print
+    extmsg=ExtMsg()
+    #extmsg.add()
+    cProfile.run(extmsg.add())
+    ll='1.2.3.4.5'
+    [i for i in range(len(ll)]
 
 
 
@@ -216,8 +240,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-

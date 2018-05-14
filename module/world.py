@@ -45,7 +45,8 @@ class World:
             time.sleep(10)
             print 'begin a new life'
             l=Life(self._worldtime)
-            l.initLife()
+            real_life=l.initLife()
+
             self._worldtime=self._worldtime+1
             print self.__repr__()
 

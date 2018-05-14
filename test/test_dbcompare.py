@@ -23,12 +23,12 @@ class TestCompare(unittest.TestCase):
         gen_sql=t.generate()
         print gen_sql
         #self.assertEqual('sql',gen_sql)
-        t.run()
+        t.run({},'totalfeecount')
 
 
     def test_oldmorefeecount(self):
         t=OldMoreFeeCount(self.table)
-        t.run()
+        t.run({},'oldmorefeecount')
 
 
     def test_compare(self):

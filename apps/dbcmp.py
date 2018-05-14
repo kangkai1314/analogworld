@@ -9,6 +9,7 @@ import inspect
 from apps.compare import *
 from functools import wraps
 from utils.db import DBObj
+from threading import current_thread
 
 CmpDict={'1':'TotalFeeCount',
          '2':'ConsistentFeeCount',
@@ -16,6 +17,18 @@ CmpDict={'1':'TotalFeeCount',
          '4':'NewMoreFeeCount',
          '5':'UnconsistentCount',
          '6':'UnconsistentFee'}
+
+KeyFileds={'ggprs':['USER_NUMBER']}
+
+
+class Logger():
+    def __init__(self):
+        self.lock = threading.RLock()
+
+    def prints(self, msg):
+        self.lock.acquire()
+        print msg
+        self.lock.release()
 
 def check_table_exist(func,table, dbobj):
     @wraps(func)
@@ -81,6 +94,8 @@ class Sql(object):
         self.busi=self.get_busi()
         self.dbObj=None
         self.lock=threading.RLock()
+        self.log=Logger()
+        self.keyfileds=None
 
     def __str__(self):
         return CmpDict[str(self.type)]
@@ -131,6 +146,11 @@ class Sql(object):
         self.dbObj.execute(update_sql)
         self.lock.release()
 
+    def get_keyfileds(self):
+        return KeyFileds[self.busi]
+
+
+
 class TotalFeeCount(Sql):
     type=1#话单和费用总数
 
@@ -138,6 +158,8 @@ class TotalFeeCount(Sql):
         Sql.__init__(self,table_name)
         self.flag=flag
         self.dbuser,self.dbObj=self.get_db(self.flag)
+
+
 
     def generate(self):
         if self.busi is not 'upload':
@@ -150,25 +172,32 @@ class TotalFeeCount(Sql):
 
     @time_record
     def run(self,result,key):
-        print 'start execute'
+        t=threading.current_thread()
+        print t.name
+
+        print '{thread} start execute totalfeecount'.format(thread=t.name)
         flag,sql=self.generate()
         print sql
         if sql:
             lst,msg=self.dbObj.execute(sql)
-            print lst
-            ret=500
+            #log.prints(lst)
+            sql_result=self.process_result(lst)
             re={}
-            re[key]=ret
+            re[key]={str(self.flag):sql_result}
             print re
             self.update_result(result,re)
-            return self.flag,ret
+            return self.flag,re
         else:
             print 'failed'
 
 
     def process_result(self,lst):
-        pass
-
+        print 'process sql execute result'
+        print lst
+        if isinstance(lst,list):
+            return [i for i in lst[0]]
+        else:
+            raise TypeError('result not a list')
 
 class ConsistentFeeCount(Sql):
     type=2#一致的话单数和费用
@@ -227,13 +256,44 @@ class OldMoreFeeCount(Sql):
         #dr_gsm_201708
 
     def do_preconditon(self):
+        dbinfo = self.get_db()
+        if isinstance(dbinfo, list) and len(dbinfo) == 3:
+            old_user = dbinfo[0][0]
+            new_user = dbinfo[1][0]
+        else:
+            raise Exception('get dbuser and dbobj failed')
         tmp_table='More_Old_%s'%(self.table_name)
         old_table='%s'%(self.table_name)
         new_table='%s'%(self.table_name)
         create_table='''create table {tmp_tab} as select * from {old_table} minus select * from {new_table}'''.format(tmp_tab=tmp_table,old_table=old_table,new_table=new_table)
         print create_table
         #create_table.excute()
+
+        sql='''insert /*+ parallel (c,8)  */ into {tmp_table} c
+            select a.*,11 from(select /*+ parallel (a,8)  */ USER_NUMBER,GGSN_ADDRESS,START_TIME,CHARGING_ID,REC_SEQ_NO,SERVICE_CODE
+            from {olduser}.{old_table} a
+            minus
+            select /*+ parallel (b,8)  */ USER_NUMBER,GGSN_ADDRESS,START_TIME,CHARGING_ID,REC_SEQ_NO,SERVICE_CODE
+            from {newuser}.{new_table} b) d,
+            {olduser}.{old_table}  a
+            where a.USER_NUMBER=d.USER_NUMBER and a.GGSN_ADDRESS = d.GGSN_ADDRESS and a.START_TIME = d.START_TIME and a.CHARGING_ID = d.CHARGING_ID and a.REC_SEQ_NO = d.REC_SEQ_NO and a.SERVICE_CODE = d.SERVICE_CODE';
+   
+
+        '''.format(tmp_table=tmp_table,olduser=old_user,newuser=new_user,old_table=self.table_name,new_table=self.table_name)
+        print sql
+        s,w=self.gen_select_condition()
+        sql1='''insert into {} c select a.*,11 from (select {s_condition} from {old_table} a minus select {s_condition} from {new_table}) d where {where_condition})'''.format(tmp_table,s_condition=s[0].strip(','),old_table=self.table_name,new_table=self.table_name,where_condition=w[0])
+        print sql1
         return tmp_table
+
+    def gen_select_condition(self):
+        keyfield=self.get_keyfileds()
+        print keyfield
+        h=[i+',' for i in keyfield]
+        print h
+        return [i+',' for i in keyfield],['a.{i}=d.{i}'.format(i=i) for i in keyfield]
+
+
 
     def generate(self):
         tmp=self.do_preconditon()
@@ -267,6 +327,20 @@ class NewMoreFeeCount(Sql):
             tmp_tab=tmp_table, old_table=old_table, new_table=new_table)
 
         msg='success'
+
+        sql='''
+          insert /*+ parallel (c,8)  */ into {table} c
+            select a.*,12 from
+            (select /*+ parallel (a,8)  */ USER_NUMBER,GGSN_ADDRESS,START_TIME,CHARGING_ID,REC_SEQ_NO,SERVICE_CODE
+            from {old_table} a
+            minus
+            select /*+ parallel (b,8)  */ USER_NUMBER,GGSN_ADDRESS,START_TIME,CHARGING_ID,REC_SEQ_NO,SERVICE_CODE
+            from {new_table} b) d,
+            {old_table}  a
+            where a.USER_NUMBER=d.USER_NUMBER and a.GGSN_ADDRESS = d.GGSN_ADDRESS and a.START_TIME = d.START_TIME and a.CHARGING_ID = d.CHARGING_ID and a.REC_SEQ_NO = d.REC_SEQ_NO and a.SERVICE_CODE = d.SERVICE_CODE';
+        '''.format(table=tmp_table,old_table=self.table_name,new_table=self.table_name)
+        print sql
+
 
         #msg=create_table.excute()
         if msg=='success':
