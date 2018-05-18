@@ -6,6 +6,9 @@ import datetime,time
 import inspect
 from threading import current_thread
 import cProfile
+from contextlib import contextmanager
+from collections import namedtuple
+from collections import Iterable
 
 class Logger():
     def __init__(self):
@@ -150,6 +153,8 @@ class Threadmanager(threading.Thread):
         if self.isAlive():
             print '%s is running'%(self.name)
 
+
+
 class Tmanager(object):
     def __init__(self,threadlst):
         self.threadlst=threadlst
@@ -171,6 +176,13 @@ class Tmanager(object):
                     self.threadlst.remove(t)
             print 'current threads %s'%(str(self.threadlst))
             time.sleep(10)
+
+    @contextmanager
+    def lock(self):
+        self.lock.acquire()
+        yield
+        self.lock.release()
+
 
 global resultdict
 resultdict={}
@@ -198,6 +210,47 @@ def produceThreads():
     return threadlst
 
 
+class A:
+    def __init__(self):
+        pass
+
+    def run(self):
+        print 'start run'
+
+class B:
+    def __init__(self):
+        pass
+
+    def __enter__(self):
+        print 'context start'
+
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print 'context over'
+@contextmanager
+def c():
+    l=[1,2,3,4,5]
+    print 'context start'
+    yield  l
+    print 'context over'
+
+
+
+class Life():
+    def __init__(self):
+        self.length=5
+
+    def next(self):
+        print [i for i in xrange(self.length)]
+        yield iter([i for i in xrange(self.length)])
+
+
+    def __iter__(self):
+        return self
+
+
+
+
 def main():
     #d=Do()
    # print d.run()
@@ -219,19 +272,46 @@ def main():
     print type(cost)
     s=Threadmanager('add')
     print Threadmanager.__name__
-    s.run()
+    #s.run()
     tlst=produceThreads()
     tm=Tmanager(tlst)
-    tm.run()
+    #tm.run()
     print resultdict
     key='1'
     ls='hello'
-    print
+    #print
     extmsg=ExtMsg()
     #extmsg.add()
-    cProfile.run(extmsg.add())
+    #cProfile.run(extmsg.add())
     ll='1.2.3.4.5'
-    [i for i in range(len(ll)]
+
+    with B():
+        a = A()
+        a.run()
+
+    with c() as w:
+        print w
+        a = A()
+        a.run()
+
+    Env_Tag = namedtuple('Env', ['old', 'new'])
+    e=Env_Tag(0,1)
+    print e.old
+    l=Life()
+
+    try:
+        ll=next(l)
+        print ll
+    except StopIteration:
+        pass
+
+    for i in iter(['123,45']):
+        print i
+
+
+
+        
+
 
 
 

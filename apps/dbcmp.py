@@ -86,6 +86,8 @@ def time_record(func):
         return ret
     return wrapper
 
+
+
 class Sql(object):
     type=0#话单条数
 
@@ -133,18 +135,29 @@ class Sql(object):
         else:
             raise ValueError('not existed flag ')
 
-    def update_result(self,result,ret):
+    @contextmanager
+    def Lock(self):
         print 'add lock'
         self.lock.acquire()
-        result.update(ret)
-        self.lock.release()
+        yield
         print 'release lock'
+        self.lock.release()
+
+    def update_result(self,result,ret):
+        #print 'add lock'
+        #self.lock.acquire()
+        with self.Lock():
+            result.update(ret)
+        #self.lock.release()
+        #print 'release lock'
 
     def update_table(self,key,value):
-        self.lock.acquire()
-        update_sql=''''''
-        self.dbObj.execute(update_sql)
-        self.lock.release()
+        #self.lock.acquire()
+        with self.Lock():
+            update_sql = ''''''
+            self.dbObj.execute(update_sql)
+
+        #self.lock.release()
 
     def get_keyfileds(self):
         return KeyFileds[self.busi]

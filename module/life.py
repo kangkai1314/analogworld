@@ -31,10 +31,16 @@ class Life(object):
             return self.build_life()
 
     def build_life(self):
-        pass
+        self.life=[i for i in range(self.life_time)]
 
     def start(self,*agrs,**kwargs):
         raise NotImplementedError
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        yield self.build_life()
 
 
 

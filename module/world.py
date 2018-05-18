@@ -50,6 +50,11 @@ class World:
             self._worldtime=self._worldtime+1
             print self.__repr__()
 
+    def begin_world(self):
+        print 'your world is start'
+        print 'please choose your life want to expirence'
+        data=raw_input('')
+
     def random_user(self):
         print 'add user'
         age=random.randint(15,30)

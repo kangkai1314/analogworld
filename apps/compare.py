@@ -4,41 +4,125 @@ CmpDict={}
 import dbcmp
 import datetime
 import threading
+from collections import namedtuple,OrderedDict
+Env_Tag=namedtuple('Env',['old','new'])
+
+from contextlib import contextmanager
 
 class ComparasionResult():
 
     def __init__(self,table_name):
-        self.table_name=table_name
-        self.result_dic={ v:k for k,v in CmpDict.items()}
+        self.result_dic=None
+        self.report={}
+        self.busi=table_name.split('_')[1]
+
+    def report_init(self):
+        self.report=OrderedDict(
+            busi=self.busi,
+            old_count=0,
+            new_count=0,
+            consis_count=0,
+            old_more_count=0,
+            new_more_count=0,
+            unconsis_count=0,
+            old_fee= 0,
+            new_fee= 0,
+            consis_fee=0,
+            old_more_fee= 0,
+            new_more_fee= 0,
+            unconsis_fee= 0,
+            xdr_rate=0,
+            fee_rate=0
+        )
+
+
 
     def CaculatePassRate(self):
+        print self.report['consis_count'],self.report['new_count']
+        if self.report:
 
-        rate=''
-
-        return rate
+            if 'xdr_rate' in self.report:
+                if  not any([self.report['consis_count'],self.report['new_count']]):
+                    return
+                self.report['xdr_rate']=self.report['consis_count']/self.report['new_count']
+            elif 'fee_rate' in self.report:
+                self.report['fee_rate']=self.report['consis_fee']/self.report['new_fee']
+        return True
 
     def ProcessToReport(self):
-        report={}
-        for key,items in self.result_dic:
+        self.report_init()
+        for key in self.result_dic:
+            print key
+            print self.result_dic[key]
+
             if key is 'TotalFeeCount':
-                total_fee,total_count=items
-            else:
-                report[key]=items
-        pass_rate=self.CaculatePassRate()
-        report['pass_rate']=pass_rate
+                if '1' in self.result_dic[key]:
+                    self.report['new_count'] = self.result_dic[key]['1'][0]
+                    self.report['new_fee'] = self.result_dic[key]['1'][1]
+                elif '0' in self.result_dic[key]:
+
+                    self.report['old_count']=self.result_dic[key]['0'][0]
+                    self.report['old_fee']=self.result_dic[key]['0'][1]
+
+            elif key is 'OldMoreFeeCount':
+                self.report['old_more_count'] = self.result_dic[key]
+                self.report['old_more_fee'] = self.result_dic[key]
+
+            elif key is 'UnconsistentFee':
+                self.report['unconsis_fee']=self.result_dic[key]
+
+            elif key is 'NewMoreFeeCount':
+                self.report['new_more_count']=self.result_dic[key]
+                self.report['new_more_fee']=self.result_dic[key]
+
+            elif key is 'UnconsistentCount':
+                self.report['unconsis_count']=self.result_dic[key]
+            elif key is 'ConsistentFeeCount':
+                self.report['consis_count'] = self.result_dic[key]
+                self.report['consis_fee']=self.result_dic[key]
+        self.CaculatePassRate()
+        print self.report
 
 
     def insert(self):
-        if self.result_dic:
-            sql='''insert into at_tc_dbcmp_result   '''
+        if self.report:
+            insert_sql='''insert into table {table_name}({columns}) VALUES ({values})'''.format()
+
+
+class ResultClean():
+    def __init__(self,table):
+        self.table=table
+
+    def __enter__(self):
+        if self.table:
+            exist_sql='''select count(*) from {}'''.format(self.table)
+            print exist_sql
+
+            delete_sql='''delete from {table} where task_id={task}'''.format(table=self.table,task=102)
+            print delete_sql
+
+        else:
+            raise Exception('Table is not existed')
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        insert_sql='''insert into table {table} VALUES ({values})'''.format(table=self.table,values=None)
+        print insert_sql
+
+
+
+
 
 class Compare(ComparasionResult):
-    def __init__(self,table_name,flag):
+    def __init__(self,table_name,flag,task_id):
         ComparasionResult.__init__(self,table_name)
         self.table_name=table_name#table_name:dr_ggprs_770_20170809
         self.builder=None
         self.flag=flag
         self.threadlst=[]
+        self.task_id=task_id
+        self.e= Env_Tag(0,1)
+
+
 
 
     def init_result_table(self):
@@ -70,7 +154,7 @@ class Compare(ComparasionResult):
             table_str='dr_'+busi
             print table_str
             if busi=='gsm' or busi=='ggprs':
-                all_region_codes=['770']
+                all_region_codes=['770','771']
                 return [table_str+table_splitor+i+table_splitor+day for i in all_region_codes]
             else:
                 return [table_str+table_splitor+day]
@@ -93,9 +177,13 @@ class Compare(ComparasionResult):
         now_day=datetime.datetime.now().strftime('%Y%m')
         return now_day
 
+    @contextmanager
     def _clean(self):
+
+        yield
         if self.table_name:
-            sql='''delete from {TABLE_NAME} where task_id={TASK_ID} '''.format(TABLE_NAME=self.table_name,TASK_ID='')
+            sql='''delete from {TABLE_NAME} where task_id={TASK_ID} '''.format(TABLE_NAME=self.table_name,TASK_ID=self.task_id)
+            print sql
 
     @staticmethod
     def _run(self,result):
@@ -137,6 +225,7 @@ class Compare(ComparasionResult):
             raise Exception('current table name is null')
 
     def run(self):
+
         table=self.build_table()
         content = self.build_compare_content(table)
         if content:
@@ -145,12 +234,32 @@ class Compare(ComparasionResult):
                 if k in self.result_dic:
                     self.result_dic[k] = ret
         return self.result_dic
+    @contextmanager
+    def clean(self):
+        if self.table_name:
+            exist_sql = '''select count(*) from {}'''.format(self.table_name)
+            print exist_sql
 
-    def update_result(self):
+            delete_sql = '''delete from {table} where task_id={task}'''.format(table=self.table_name, task=102)
+            print delete_sql
+
+        yield
+        insert_sql = '''insert into table {table} VALUES ({values})'''.format(table=self.table_name, values=None)
+        print insert_sql
+
+
+
+    def update_result(self,result):
+
+        #with ResultClean(self.table_name):
+            #print 'process result'
+        with self.clean() :
+            self.result_dic=result
+            self.ProcessToReport()
+
         if self.result_dic:
-            for k in self.result_dic:
-                update_sql = ''''''
-                update_sql.execute()
+            for k,v in enumerate(self.result_dic):
+                print k,v
         return True
 
     def build_compare_content(self,table):
@@ -204,11 +313,12 @@ class ThreadManager(threading.Thread):
                     self.threadlst.remove(t)
 
 class DbCompare(Compare):
-    def __init__(self,table_name,flag):
-        Compare.__init__(self,table_name,flag)
+    def __init__(self,table_name,flag,task_id):
+        Compare.__init__(self,table_name,flag,task_id)
         self.type=1
         self.manager=None
         self.lock=threading.RLock()
+
 
     def construct_compare(self):
         self.builder=dbcmp.Builder(self.table_name)
@@ -219,29 +329,43 @@ class DbCompare(Compare):
         return self.builder
 
     def build_compare_content(self,table_name):
-        content=dict(
-        totalfeecount = dbcmp.TotalFeeCount(table_name,self.flag),
-        consistentfeecount = dbcmp.ConsistentFeeCount(table_name),
-        oldmorefeecount = dbcmp.OldMoreFeeCount(table_name),
-        newmorefeecount = dbcmp.NewMoreFeeCount(table_name),
-        unconsistentcount = dbcmp.UnconsistentCount(table_name),
-        unconsistentfee = dbcmp.UnconsistentFee(table_name,self.flag)
-        )
-        return content
+        if self.flag==self.e.old:
+            return dict(
+        totalfeecount = dbcmp.TotalFeeCount(table_name,self.flag))
+        else:
+            content = dict(
+                totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag),
+                consistentfeecount=dbcmp.ConsistentFeeCount(table_name),
+                oldmorefeecount=dbcmp.OldMoreFeeCount(table_name),
+                newmorefeecount=dbcmp.NewMoreFeeCount(table_name),
+                unconsistentcount=dbcmp.UnconsistentCount(table_name),
+                unconsistentfee=dbcmp.UnconsistentFee(table_name, self.flag)
+            )
+            return content
+
+
 
     def run(self):
         global result
         result={}
         try:
-            table=self.build_table()[0]
-            content=self.build_compare_content(table)
+            table=self.build_table()
+            #get table from busi if busi
+            contents=[self.build_compare_content(i) for i in table]
+
+
         except Exception as e:
             raise Exception('get compare content is failed')
-        for c in content:
-            func=content[c]
-            key=func.__str__()
-            t=threading.Thread(target=func.run,args=(result,key))
-            self.threadlst.append(t)
+        for c in contents:
+            print c
+            for d in c:
+                print d
+                func = c[d]
+                key = func.__str__()
+                t = threading.Thread(target=func.run, args=(result, key))
+                self.threadlst.append(t)
+
+
 
         self.manager=Manager(self.threadlst)
         #self.manager=ThreadManager(self.threadlst)
@@ -249,31 +373,54 @@ class DbCompare(Compare):
 
         self.manager.run()
         #self.manager.run()
-        print result
+        return result
 
 
 class MdbCompare(Compare):
-    def __init__(self,table_name):
-        Compare.__init__(table_name)
+    def __init__(self,table_name,task_id):
+        Compare.__init__(table_name,task_id)
 
     def run(self,*agrs,**kwargs):
-        self.build_table(cls=Compare)
+        global result
+        result = {}
+        try:
+            table = self.build_table()[0]
+            content = self.build_compare_content(table)
+        except Exception as e:
+            raise Exception('get compare content is failed')
+        for c in content:
+            func = content[c]
+            key = func.__str__()
+            t = threading.Thread(target=func.run, args=(result, key))
+            self.threadlst.append(t)
+
+        self.manager = Manager(self.threadlst)
+        # self.manager=ThreadManager(self.threadlst)
+        # self.manager.setName('Manager')
+
+        self.manager.run()
+        # self.manager.run()
+        return result
 
     def build_compare_content(self,table_name):
+        if self.flag==self.e.old:
+            return dict(
+            totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag))
+        else:
+            content = dict(
+                totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag),
+                consistentfeecount=dbcmp.ConsistentFeeCount(table_name),
+                oldmorefeecount=dbcmp.OldMoreFeeCount(table_name),
+                newmorefeecount=dbcmp.NewMoreFeeCount(table_name),
+                unconsistentcount=dbcmp.UnconsistentCount(table_name),
+                unconsistentfee=dbcmp.UnconsistentFee(table_name, self.flag)
+            )
+            return content
 
-        content = dict(
-            totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag),
-            consistentfeecount=dbcmp.ConsistentFeeCount(table_name),
-            oldmorefeecount=dbcmp.OldMoreFeeCount(table_name),
-            newmorefeecount=dbcmp.NewMoreFeeCount(table_name),
-            unconsistentcount=dbcmp.UnconsistentCount(table_name),
-            unconsistentfee=dbcmp.UnconsistentFee(table_name, self.flag)
-        )
-        return content
 
 class UploadCompare(Compare):
-    def __init__(self,table_name,flag):
-        Compare.__init__(table_name,flag)
+    def __init__(self,table_name,flag,task_id):
+        Compare.__init__(table_name,flag,task_id)
 
     def build_compare_content(self,table_name):
         table_name = self.build_table()[0]
@@ -281,3 +428,25 @@ class UploadCompare(Compare):
             totalfeecount=dbcmp.TotalFeeCount(table_name, self.flag)
         )
         return content
+
+    def run(self):
+        global result
+        result = {}
+        try:
+            table = self.build_table()[0]
+            content = self.build_compare_content(table)
+        except Exception as e:
+            raise Exception('get compare content is failed')
+        for c in content:
+            func = content[c]
+            key = func.__str__()
+            t = threading.Thread(target=func.run, args=(result, key))
+            self.threadlst.append(t)
+
+        self.manager = Manager(self.threadlst)
+        # self.manager=ThreadManager(self.threadlst)
+        # self.manager.setName('Manager')
+
+        self.manager.run()
+        # self.manager.run()
+        return result

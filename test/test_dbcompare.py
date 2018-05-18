@@ -34,7 +34,7 @@ class TestCompare(unittest.TestCase):
     def test_compare(self):
         table_name='dr_sms_$specday'
         flag=1
-        com=Compare(table_name,flag)
+        com=Compare(table_name,flag,102)
         day=com.get_curr_days
         print day
         busi=com.get_busi_type
@@ -48,10 +48,26 @@ class TestCompare(unittest.TestCase):
     def test_dbcompare(self):
         table_name='dr_ggprs_$region_code_$specday'
         flag=1
-        dbcom=DbCompare(table_name,flag)
+        dbcom=DbCompare(table_name,flag,102)
         dbcom.build_table()
         #dbcom.build_compare_content(t)
-        dbcom.run()
+        result=dbcom.run()
+        dbcom.update_result(result)
+
+
+
+    def test_report(self):
+        r=ComparasionResult('dr_ggprs')
+        r.report_init()
+        print r.report
+        print r.result_dic
+
+
+    def test_mdbcompare(self):
+        pass
+
+    def test_uploadcompare(self):
+        pass
 
 
 
