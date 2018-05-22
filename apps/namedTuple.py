@@ -28,6 +28,7 @@ class NamedTuple(tuple):
 
 
 
+
     def __init__(self,iterable,fileds):
         self.iterable=iterable
         self.fileds=fileds

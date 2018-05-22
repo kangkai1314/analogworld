@@ -39,3 +39,13 @@ for j in range(5):
     print i.next().next()
     i.next()
     i.next()
+
+
+class newLine(object):
+    def __new__(cls, *args, **kwargs):
+        print cls
+        return cls.__init__(object.)
+
+
+n=newLine()
+

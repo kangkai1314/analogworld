@@ -122,9 +122,6 @@ class Compare(ComparasionResult):
         self.task_id=task_id
         self.e= Env_Tag(0,1)
 
-
-
-
     def init_result_table(self):
         insert_sql=''''''
         self.dbobj.execute(insert_sql)
@@ -234,6 +231,20 @@ class Compare(ComparasionResult):
                 if k in self.result_dic:
                     self.result_dic[k] = ret
         return self.result_dic
+
+    def run_all(self,paraller=False):
+        if not paraller:
+            table = self.build_table()
+            content = self.build_compare_content(table)
+            if content:
+                for k in content:
+                    ret = k.run()
+                    if k in self.result_dic:
+                        self.result_dic[k] = ret
+            return self.result_dic
+
+
+
     @contextmanager
     def clean(self):
         if self.table_name:
