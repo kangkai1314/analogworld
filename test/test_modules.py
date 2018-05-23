@@ -1,5 +1,6 @@
 #--*-- coding:utf-8 --*--
 from unittest import TestCase
+import unittest
 
 class TestModule(TestCase):
     def setUp(self):
@@ -16,3 +17,7 @@ class TestModule(TestCase):
     def tearDown(self):
         #do some thing after test
         pass
+
+if __name__ == '__main__':
+    unittest.main()
+

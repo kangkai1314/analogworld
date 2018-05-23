@@ -1,5 +1,5 @@
 #--*-- coding:utf-8 --*--
-
+from itertools import groupby
 
 class BaseListener(object):
     type='default'
@@ -39,9 +39,25 @@ class BaseListener(object):
 class ThreadListener(BaseListener):
     type='thread'
 
-    def __init__(self):
+    def __init__(self,threadlst):
         super(BaseListener,self).__init__()
-        self.threadlst=[]
+        self.threadlst=threadlst
+
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        if self.threadlst:
+            for i in self.threadlst:
+                yield i
+        else:
+            raise TypeError('self.threadlst is not a list')
+
+
+
+
+
 
 
 
@@ -49,10 +65,12 @@ class ThreadListener(BaseListener):
 
 
 def main():
-    bl=BaseListener()
-    bl()
-    t=ThreadListener()
-    t()
+    l=[1,2,3,4,5,6]
+    for i in xrange(0,len(l),1):
+        print l[i:i+1]
+
+
+
  
 
 
