@@ -6,6 +6,7 @@ import random
 import Queue
 from utils.consts import *
 from module.life import *
+from apps.login import *
 
 class World:
     def __init__(self,):
@@ -53,7 +54,12 @@ class World:
     def begin_world(self):
         print 'your world is start'
         print 'please choose your life want to expirence'
-        data=raw_input('')
+        name=raw_input('pelease input  your name')
+        passwd=input('please input your passwd')
+        id=input('please input your id')
+        user=User(name,passwd,id)
+        l=Login(user)
+
 
     def random_user(self):
         print 'add user'

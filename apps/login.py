@@ -32,6 +32,10 @@ class Login(Action):
         self.user=user
         self.login_time=None
 
+    def __call__(self, user):
+        self.run()
+
+
     def check(self,user):
         if isinstance(user,User):
             return 'check success'

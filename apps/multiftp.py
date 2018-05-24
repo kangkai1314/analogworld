@@ -99,7 +99,7 @@ class MultiFtp(object):
         if ret:
             length=len(normalfilelst)
             print length
-            count=length/10
+            count=length/thread_num
             print count
             count+=1
             group=self.groupby(normalfilelst,count)
