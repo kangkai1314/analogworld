@@ -51,8 +51,9 @@ class Login(Action):
 
 class Regist(Action):
     action_id = 3
-    def __init__(self,user):
-        self.user=user
+    def __init__(self,name,passwd):
+        self.username=name
+        self.passwd=passwd
         self.regist_time=None
 
     def check(self,*args,**kwargs):

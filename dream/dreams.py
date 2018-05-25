@@ -10,13 +10,16 @@ class Dream(object):
         while True:
             time.sleep(INTERVALS)
             print 'your dream is running'
+            print 'this is your best chance '
+            print 'just keep it ,hurry up'
+
+
 
 
 def main():
-    filenum=15
-    threadnum=10
-    cou=filenum%threadnum
-    print cou
+
+    d=Dream()
+    d.run()
 
 if __name__ == '__main__':
     main()

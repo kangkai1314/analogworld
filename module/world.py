@@ -61,6 +61,7 @@ class World:
         l=Login(user)
 
 
+
     def random_user(self):
         print 'add user'
         age=random.randint(15,30)

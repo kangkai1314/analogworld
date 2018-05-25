@@ -2,10 +2,11 @@
 from functools import wraps
 class User(object):
 
-    def __init__(self,name,passwd,id):
+    def __init__(self,name,passwd):
         self._account=name
         self._passwd=passwd
-        self._userId=id
+        self._userId=0
+
 
     def __repr__(self):
         return '{}'.format(str(self._userId)+self._account)
