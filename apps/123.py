@@ -76,8 +76,9 @@ class Query():
 
 
 
-with Query('name'):
-    Query.query()
+
+
+
 
 
 

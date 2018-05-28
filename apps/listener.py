@@ -5,6 +5,7 @@ import Queue
 import datetime
 from threading import current_thread
 from collections import defaultdict
+from adapter import BaseAdapter
 
 
 class BaseListener(object):
@@ -102,11 +103,15 @@ def sleep(n):
     lock.release()
 
 def main():
+
+
     threadlst=[]
     for i in range(5):
         t=threading.Thread(target=sleep,args=(10,))
         threadlst.append(t)
     tl=ThreadListener(threadlst)
+    ba=BaseAdapter(tl,dict(listen=tl.run))
+    ba.listen()
     ll=iter(tl)
     print ll
     for i in ll :
@@ -124,10 +129,6 @@ def main():
 
 
 
-
-
-
- 
 
 
 if __name__ == '__main__':

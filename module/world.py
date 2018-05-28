@@ -7,6 +7,7 @@ import Queue
 from utils.consts import *
 from module.life import *
 from apps.login import *
+from event import *
 
 class World:
     def __init__(self,):
@@ -20,6 +21,16 @@ class World:
         self.taskQueue=Queue.Queue()
         self.username='admin'
         self._worldtime=0
+        self.observers=[]
+        self.listenevent=threading.Event()
+
+    def attach(self,observer):
+        self.observers.append(observer)
+
+    def notify(self):
+        for o in self.observers:
+            o.update()
+
 
 
     def __repr__(self):
@@ -33,9 +44,12 @@ class World:
             self.status='现在正在干活'
 
     def start(self):
-        Mainthread=threading.Thread(target=self.start_world)
+        Mainthread=threading.Thread(target=self.begin_world)
         self.threadlst.append(Mainthread)
         Mainthread.start()
+        Lisenthread=threading.Thread(target=self.world_listener)
+        self.threadlst.append(Lisenthread)
+        Lisenthread.start()
 
     def start_world(self):
         print'请创造你的世界'
@@ -45,8 +59,8 @@ class World:
             self.setSattus(0)
             time.sleep(10)
             print 'begin a new life'
-            l=Life(self._worldtime)
-            real_life=l.initLife()
+            #l=Life(self._worldtime)
+            #real_life=l.initLife()
 
             self._worldtime=self._worldtime+1
             print self.__repr__()
@@ -57,8 +71,21 @@ class World:
         name=raw_input('pelease input  your name')
         passwd=input('please input your passwd')
         id=input('please input your id')
-        user=User(name,passwd,id)
-        l=Login(user)
+        user=User(name,passwd)
+        login=Login(name,passwd)
+        mainUi=UiEvent('main')
+        self.attach(mainUi)
+        if login():
+            self.notify()
+            print self.listenevent.isSet()
+            if  self.listenevent.isSet():
+                self.listenevent.set()
+            self.start_world()
+
+        else:
+            pass
+
+
 
 
 
@@ -75,8 +102,14 @@ class World:
         pass
 
     def world_listener(self):
+        print 'listen is start '
+        print self.listenevent.isSet()
+        if not self.listenevent.isSet():
+
+            self.listenevent.wait()
         while True:
-            time.sleep(60)
+            time.sleep(1)
+            print 'start listen'
 
 
 def main():

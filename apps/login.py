@@ -6,7 +6,7 @@ from module.user import User
 from utils.check import *
 from module.message import *
 
-UserDict={}
+UserDict={'kangkai':123456}
 Music_Path=u'D:\CloudMusic'
 
 class Action(object):
@@ -27,13 +27,15 @@ class Login(Action):
 
     '''
     action_id = 2
-    def __init__(self,user):
+    def __init__(self,name,passwd):
         self.msg=None
-        self.user=user
+        self.username=name
+        self.passwd=passwd
         self.login_time=None
 
-    def __call__(self, user):
-        self.run()
+    def __call__(self, ):
+         return self.run()
+
 
 
     def check(self,user):
@@ -42,12 +44,20 @@ class Login(Action):
         else:
             raise TypeError('check func not get correct param')
 
-    def run(self,account,passwd):
-        if account is self.user._account and passwd is self.user._getpasswd():
-            return  'login success'
+    def run(self):
+        if self.username in UserDict:
+            if self.passwd==UserDict[str(self.username)]:
+                print 'login success'
+                return True
+            else:
+                raise TypeError('user passwd is wrong')
         else:
-            print 'username or passwd is wrong ,please check'
-            return 'login failed'
+            raise TypeError('username is wrong')
+
+
+
+
+
 
 class Regist(Action):
     action_id = 3
