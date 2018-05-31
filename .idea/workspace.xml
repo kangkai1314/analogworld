@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="435edcc9-ecd2-4971-9b36-ff73005bc228" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/adapter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/web.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/study/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/study/execise1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/123.py" afterPath="$PROJECT_DIR$/apps/123.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/listener.py" afterPath="$PROJECT_DIR$/apps/listener.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/login.py" afterPath="$PROJECT_DIR$/apps/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/world" afterPath="$PROJECT_DIR$/docs/world" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dream/dreams.py" afterPath="$PROJECT_DIR$/dream/dreams.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/dbcmp.py" afterPath="$PROJECT_DIR$/apps/dbcmp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/event.py" afterPath="$PROJECT_DIR$/module/event.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/world.py" afterPath="$PROJECT_DIR$/module/world.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_dbcompare.py" afterPath="$PROJECT_DIR$/test/test_dbcompare.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/apps/compare.py" afterPath="$PROJECT_DIR$/apps/compare_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/analogworld$execise1.coverage" NAME="execise1 Coverage Results" MODIFIED="1527757272779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study" />
     <SUITE FILE_PATH="coverage/analogworld$client.coverage" NAME="client Coverage Results" MODIFIED="1523954655498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$Unittests_in_testwrapper_py.coverage" NAME="Unittests in testwrapper.py Coverage Results" MODIFIED="1524734440763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/practice" />
+    <SUITE FILE_PATH="coverage/analogworld$web.coverage" NAME="web Coverage Results" MODIFIED="1527561775383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$Unittests_in_test_dbconnect_py.coverage" NAME="Unittests in test_dbconnect.py Coverage Results" MODIFIED="1527155741291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/analogworld$123.coverage" NAME="123 Coverage Results" MODIFIED="1527495593852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$check.coverage" NAME="check Coverage Results" MODIFIED="1524647239814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -34,14 +35,15 @@
     <SUITE FILE_PATH="coverage/analogworld$dreams.coverage" NAME="dreams Coverage Results" MODIFIED="1527493983927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dream" />
     <SUITE FILE_PATH="coverage/analogworld$dbcmp.coverage" NAME="dbcmp Coverage Results" MODIFIED="1525939607728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$consts.coverage" NAME="consts Coverage Results" MODIFIED="1523533821500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/analogworld$server.coverage" NAME="server Coverage Results" MODIFIED="1524038546811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
+    <SUITE FILE_PATH="coverage/analogworld$server.coverage" NAME="server Coverage Results" MODIFIED="1527647999894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$version.coverage" NAME="version Coverage Results" MODIFIED="1524649387065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/analogworld$Unittests_in_test_dbcompare_py.coverage" NAME="Unittests in test_dbcompare.py Coverage Results" MODIFIED="1526545174954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/analogworld$event.coverage" NAME="event Coverage Results" MODIFIED="1527736882730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
+    <SUITE FILE_PATH="coverage/analogworld$Unittests_in_test_dbcompare_py.coverage" NAME="Unittests in test_dbcompare.py Coverage Results" MODIFIED="1527582817812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/analogworld$adapter.coverage" NAME="adapter Coverage Results" MODIFIED="1527493420707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$user.coverage" NAME="user Coverage Results" MODIFIED="1524211031185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$kangkai1.coverage" NAME="kangkai1 Coverage Results" MODIFIED="1524139681977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/practice" />
     <SUITE FILE_PATH="coverage/analogworld$namedTuple.coverage" NAME="namedTuple Coverage Results" MODIFIED="1526546857385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
-    <SUITE FILE_PATH="coverage/analogworld$world.coverage" NAME="world Coverage Results" MODIFIED="1527504536535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
+    <SUITE FILE_PATH="coverage/analogworld$world.coverage" NAME="world Coverage Results" MODIFIED="1527557879947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$message.coverage" NAME="message Coverage Results" MODIFIED="1524109141827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
     <SUITE FILE_PATH="coverage/analogworld$listener.coverage" NAME="listener Coverage Results" MODIFIED="1527493550849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
     <SUITE FILE_PATH="coverage/analogworld$imageprocess.coverage" NAME="imageprocess Coverage Results" MODIFIED="1523346487306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -100,79 +102,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="123.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/123.py">
+      <file leaf-file-name="dbcmp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="world.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/world.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="79" column="11" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+            <state relative-caret-position="-2331">
+              <caret line="92" column="15" lean-forward="false" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
               <folding>
-                <element signature="e#27#47#0" expanded="true" />
+                <element signature="e#42#58#0" expanded="true" />
+                <element signature="e#273#459#0" expanded="false" />
+                <element signature="e#519#678#0" expanded="false" />
+                <element signature="e#3175#3705#0" expanded="false" />
+                <marker date="1527661420816" expanded="true" signature="810:831" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="1255:1276" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="1723:1744" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="4641:4710" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="4859:4890" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="6686:6755" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="8995:9143" ph="insert into missing_value... " />
+                <marker date="1527661420816" expanded="true" signature="9648:9707" ph="select count... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="10294:10383" ph="create table... missing_value" />
+                <marker date="1527661420816" expanded="true" signature="11502:11561" ph="select count... missing_value" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="life.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/life.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/login.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1539">
-              <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
-              <folding>
-                <element signature="e#225#377#0" expanded="false" />
-                <element signature="e#404#501#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/event.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding>
-                <element signature="e#26#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="multiftp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/multiftp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="namedTuple.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,22 +137,194 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabdef1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
+      <file leaf-file-name="namedTuple.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
+            <state relative-caret-position="-3135">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="world" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/world">
+      <file leaf-file-name="execise1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/study/execise1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="121">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_dbcompare.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="e#26#41#0" expanded="true" />
+                <marker date="1527650214971" expanded="true" signature="380:428" ph="select count... More_dr_ggprs_20141222_7720" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/message.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/event.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1013">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding>
+                <element signature="e#26#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listener.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/listener.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+              <folding>
+                <element signature="e#246#792#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tabdef1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89737">
+              <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
+              <folding>
+                <marker date="1525252404014" expanded="true" signature="10255:10291" ph="select tabna... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="34151:34220" ph="select host,... dba_db_links" />
+                <marker date="1525252404014" expanded="true" signature="35335:35407" ph="select lower... all_all_tablesmissing_value" />
+                <marker date="1525252404014" expanded="true" signature="35619:35684" ph="select host,... dba_db_links" />
+                <marker date="1525252404014" expanded="true" signature="38437:38544" ph="select para_... at_sys_base_para" />
+                <marker date="1525252404014" expanded="true" signature="38686:38787" ph="select para_... at_sys_base_para" />
+                <marker date="1525252404014" expanded="true" signature="42245:42348" ph="select dbuse... at_tc_dbuser_def" />
+                <marker date="1525252404014" expanded="true" signature="42505:42608" ph="select dbuse... at_tc_dbuser_def" />
+                <marker date="1525252404014" expanded="true" signature="43185:43237" ph="select disti... at_sys_operator_info" />
+                <marker date="1525252404014" expanded="true" signature="43732:43898" ph="select curr_... at_tc_table_names_map" />
+                <marker date="1525252404014" expanded="true" signature="44560:44711" ph="insert into at_tc_table_names_map... " />
+                <marker date="1525252404014" expanded="true" signature="46330:46404" ph="select to_ch... at_tc_task" />
+                <marker date="1525252404014" expanded="true" signature="52591:52629" ph="select busi_... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="53157:53254" ph="select busi_... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="57971:58083" ph="select lower... all_tab_columnsmissing_value" />
+                <marker date="1525252404014" expanded="true" signature="60569:60641" ph="select lower... at_tv_tab_define" />
+                <marker date="1525252404014" expanded="true" signature="61175:61545" ph="select lower... at_tc_dbcmp_tabsinfo" />
+                <marker date="1525252404014" expanded="true" signature="61723:62108" ph="select lower... at_tc_dbcmp_tabsinfo" />
+                <marker date="1525252404014" expanded="true" signature="62294:62695" ph="select lower... at_tc_dbcmp_tabsinfo" />
+                <marker date="1525252404014" expanded="true" signature="65699:66129" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
+                <marker date="1525252404014" expanded="true" signature="65991:66074" ph="select disti... at_tc_busi_compared_tables" />
+                <marker date="1525252404014" expanded="true" signature="66352:66799" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
+                <marker date="1525252404014" expanded="true" signature="66662:66745" ph="select disti... at_tc_busi_compared_tables" />
+                <marker date="1525252404014" expanded="true" signature="67423:67624" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
+                <marker date="1525252404014" expanded="true" signature="67506:67589" ph="select disti... at_tc_busi_compared_tables" />
+                <marker date="1525252404014" expanded="true" signature="67787:67915" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
+                <marker date="1525252404014" expanded="true" signature="80542:80553" ph="drop table m... " />
+                <marker date="1525252404014" expanded="true" signature="80626:80637" ph="drop table m... " />
+                <marker date="1525252404014" expanded="true" signature="84646:84714" ph="select colum... all_tab_colsmissing_value" />
+                <marker date="1525252404014" expanded="true" signature="91401:91519" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="91537:91652" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="91670:91786" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="91804:91920" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="92974:93107" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="93125:93256" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="93274:93406" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="94809:94969" ph="insert into at_tc_dbcmp_diff_detail... " />
+                <marker date="1525252404014" expanded="true" signature="94987:95143" ph="insert into at_tc_dbcmp_diff_stat... " />
+                <marker date="1525252404014" expanded="true" signature="95161:95318" ph="insert into at_tc_dbcmp_diff_stat1... " />
+                <marker date="1525252404014" expanded="true" signature="95336:95494" ph="insert into at_tc_dbcmp_diff_count... " />
+                <marker date="1525252404014" expanded="true" signature="96238:96339" ph="select err_c... at_tc_ignore_errcode" />
+                <marker date="1525252404014" expanded="true" signature="96495:96596" ph="select err_c... at_tc_ignore_errcode" />
+                <marker date="1525252404014" expanded="true" signature="96751:96852" ph="select err_c... at_tc_ignore_errcode" />
+                <marker date="1525252404014" expanded="true" signature="99873:99896" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="99983:100006" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="100516:100539" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="100631:100654" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="101204:101490" ph="insert into at_tc_dbcmp_diff_count... " />
+                <marker date="1525252404014" expanded="true" signature="101364:101490" ph="select 'miss... dual" />
+                <marker date="1525252404014" expanded="true" signature="104820:104843" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="104933:104956" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="105042:105065" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="105150:105173" ph="select missi... missing_value" />
+                <marker date="1525252404014" expanded="true" signature="105257:105518" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="105994:106060" ph="select tc_id... at_tc" />
+                <marker date="1525252404014" expanded="true" signature="107912:108078" ph="select curr_... at_tc_table_names_map" />
+                <marker date="1525252404014" expanded="true" signature="108837:108988" ph="insert into at_tc_table_names_map... " />
+                <marker date="1525252404014" expanded="true" signature="129723:130376" ph="select %s,di... " />
+                <marker date="1525252404014" expanded="true" signature="130436:131007" ph="select %s,di... " />
+                <marker date="1525252404014" expanded="true" signature="131059:131342" ph="select %s,di... " />
+                <marker date="1525252404014" expanded="true" signature="133525:133866" ph="insert into missing_value... " />
+                <marker date="1525252404014" expanded="true" signature="140071:140397" ph="insert into at_tc_dbcmp_diff_stat... " />
+                <marker date="1525252404014" expanded="true" signature="140249:140397" ph="select 'miss... " />
+                <marker date="1525252404014" expanded="true" signature="141684:142011" ph="insert into at_tc_dbcmp_diff_stat1... " />
+                <marker date="1525252404014" expanded="true" signature="141863:142011" ph="select 'miss... " />
+                <marker date="1525252404014" expanded="true" signature="144799:145072" ph="select key_i... at_tc_dbcmp_diff_stat" />
+                <marker date="1525252404014" expanded="true" signature="152344:152569" ph="insert into at_tc_dbcmp_diff_stat... " />
+                <marker date="1525252404014" expanded="true" signature="154411:154458" ph="select root_... at_tc" />
+                <marker date="1525252404014" expanded="true" signature="154613:154660" ph="select statu... at_tc_task_tc" />
+                <marker date="1525252404014" expanded="true" signature="154996:155177" ph="select statu... at_tc_task_tc" />
+                <marker date="1525252404014" expanded="true" signature="158784:158906" ph="select lower... at_sys_base_para" />
+                <marker date="1525252404014" expanded="true" signature="168974:169070" ph="select objec... at_sys_obj_define" />
+                <marker date="1525252404014" expanded="true" signature="183557:183633" ph="select date_... at_tc_data_prepare_date" />
+                <marker date="1525252404014" expanded="true" signature="198079:198179" ph="select env_v... at_tc_sysenv" />
+                <marker date="1525252404014" expanded="true" signature="198897:198953" ph="select busi_... at_tc" />
+                <marker date="1525252404014" expanded="true" signature="199156:199224" ph="select count... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="199461:199528" ph="select busi_... at_tc" />
+                <marker date="1525252404014" expanded="true" signature="199760:199909" ph="select total... at_tc_process_result" />
+                <marker date="1525252404014" expanded="true" signature="200526:200714" ph="insert into at_tc_dz_time... " />
+                <marker date="1525252404014" expanded="true" signature="201538:201684" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="201896:201939" ph="select root_... at_tc" />
+                <marker date="1525252404014" expanded="true" signature="202107:202167" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="202225:202284" ph="delete from " />
+                <marker date="1525252404014" expanded="true" signature="202342:202409" ph="select table... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="202619:202805" ph="select 'trun... all_all_tables" />
+                <marker date="1525252404014" expanded="true" signature="202916:203052" ph="select 'trun... all_all_tables" />
+                <marker date="1525252404014" expanded="true" signature="203806:203853" ph="select runty... at_tc_task" />
+                <marker date="1525252404014" expanded="true" signature="204296:204466" ph="select table... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="205101:205210" ph="select sql_p... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="205919:206023" ph="select sql f... " />
+                <marker date="1525252404014" expanded="true" signature="206780:206895" ph="select proce... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="208002:208186" ph="insert into at_tc_dz_time... " />
+                <marker date="1525252404014" expanded="true" signature="208655:208801" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="209304:209461" ph="select table... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="210902:211017" ph="select proce... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="212222:212406" ph="insert into at_tc_dz_time... " />
+                <marker date="1525252404014" expanded="true" signature="212930:213000" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="213145:213291" ph="update at_tc... " />
+                <marker date="1525252404014" expanded="true" signature="213791:213953" ph="select table... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="215394:215509" ph="select proce... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="217524:217648" ph="select lower... at_sys_base_para" />
+                <marker date="1525252404014" expanded="true" signature="218419:218534" ph="select disti... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="220016:220122" ph="select table... at_tc_compared_table_selected" />
+                <marker date="1525252404014" expanded="true" signature="220439:220554" ph="select proce... at_tc_compared_table_selected" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -237,7 +359,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/world.py" />
         <option value="$PROJECT_DIR$/utils/imageprocess.py" />
         <option value="$PROJECT_DIR$/module/practice/client1.py" />
         <option value="$PROJECT_DIR$/module/practice/client2.py" />
@@ -261,9 +382,7 @@
         <option value="$PROJECT_DIR$/module/client.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/utils/db.py" />
-        <option value="$PROJECT_DIR$/test/test_dbcompare.py" />
         <option value="$PROJECT_DIR$/docs/design" />
-        <option value="$PROJECT_DIR$/apps/dbcmp.py" />
         <option value="$PROJECT_DIR$/module/life.py" />
         <option value="$PROJECT_DIR$/apps/compare.py" />
         <option value="$PROJECT_DIR$/apps/namedTuple.py" />
@@ -283,9 +402,14 @@
         <option value="$PROJECT_DIR$/dream/dreams.py" />
         <option value="$PROJECT_DIR$/apps/login.py" />
         <option value="$PROJECT_DIR$/docs/world" />
-        <option value="$PROJECT_DIR$/module/event.py" />
         <option value="$PROJECT_DIR$/apps/123.py" />
         <option value="$PROJECT_DIR$/module/world.py" />
+        <option value="$PROJECT_DIR$/apps/web.py" />
+        <option value="$PROJECT_DIR$/test/test_dbcompare.py" />
+        <option value="$PROJECT_DIR$/apps/dbcmp.py" />
+        <option value="$PROJECT_DIR$/apps/compare_test.py" />
+        <option value="$PROJECT_DIR$/module/event.py" />
+        <option value="$PROJECT_DIR$/study/execise1.py" />
       </list>
     </option>
   </component>
@@ -339,91 +463,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dream" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analogworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
+              <option name="myItemId" value="study" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,8 +512,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.world">
-    <configuration default="false" name="listener" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.execise1">
+    <configuration default="false" name="web" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -486,32 +526,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="analogworld" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/listener.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/web.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="dreams" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittests in test_dbcompare.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dream" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="analogworld" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dream/dreams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_dbcompare.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="world" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -524,45 +561,45 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="analogworld" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module/world.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="event" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/module" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="analogworld" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/adapter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module/event.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="execise1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="analogworld" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/123.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/study/execise1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -717,19 +754,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.listener" />
-      <item index="1" class="java.lang.String" itemvalue="Python.dreams" />
-      <item index="2" class="java.lang.String" itemvalue="Python.world" />
-      <item index="3" class="java.lang.String" itemvalue="Python.adapter" />
-      <item index="4" class="java.lang.String" itemvalue="Python.123" />
+      <item index="0" class="java.lang.String" itemvalue="Python.web" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_dbcompare.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python.server" />
+      <item index="3" class="java.lang.String" itemvalue="Python.event" />
+      <item index="4" class="java.lang.String" itemvalue="Python.execise1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.world" />
-        <item index="1" class="java.lang.String" itemvalue="Python.123" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dreams" />
-        <item index="3" class="java.lang.String" itemvalue="Python.listener" />
-        <item index="4" class="java.lang.String" itemvalue="Python.adapter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.execise1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.event" />
+        <item index="2" class="java.lang.String" itemvalue="Python.server" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_dbcompare.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python.web" />
       </list>
     </recent_temporary>
   </component>
@@ -747,8 +784,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_dbconnect_py - 2018.05.24 at 17h 24m 53s.xml">
-      <configuration name="Unittests in test_dbconnect.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_dbcompare_py - 2018.05.29 at 16h 33m 58s.xml">
+      <configuration name="Unittests in test_dbcompare.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_dbconnect_py - 2018.05.24 at 17h 26m 15s.xml">
       <configuration name="Unittests in test_dbconnect.py" configurationId="tests" />
@@ -779,20 +816,19 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13918306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14372164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16717096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3535188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43207857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5433715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43371522" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5433715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -810,19 +846,19 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3535188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.511745" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0801964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43371522" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5204583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13918306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14145234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16717096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5433715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5433715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -846,18 +882,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/page/main.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/page/mainpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -957,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_multiftp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -971,32 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1653">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/itttt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/contextlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1067,7 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,26 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="440" column="41" lean-forward="false" selection-start-line="440" selection-start-column="41" selection-end-line="440" selection-end-column="41" />
-          <folding>
-            <marker date="1526439182120" expanded="true" signature="760:781" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="1205:1226" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="1673:1694" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="4605:4674" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="4823:4854" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="6650:6719" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="8959:9107" ph="insert into missing_value... " />
-            <marker date="1526439182120" expanded="true" signature="9612:9671" ph="select count... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="10258:10347" ph="create table... missing_value" />
-            <marker date="1526439182120" expanded="true" signature="11466:11525" ph="select count... missing_value" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-152">
           <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,19 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/listener.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#55#0" expanded="false" />
-            <element signature="e#246#792#0" expanded="false" />
-            <element signature="e#1558#1637#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1146,58 +1104,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/compare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="149" column="29" lean-forward="true" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
-          <folding>
-            <element signature="e#4977#5190#0" expanded="false" />
-            <element signature="e#5243#5314#0" expanded="false" />
-            <marker date="1526892767922" expanded="true" signature="2848:2907" ph="insert into table... " />
-            <marker date="1526892767922" expanded="true" signature="3072:3093" ph="select count... missing_value" />
-            <marker date="1526892767922" expanded="true" signature="3173:3207" ph="delete from " />
-            <marker date="1526892767922" expanded="true" signature="3173:3213" ph="delete from " />
-            <marker date="1526892767922" expanded="true" signature="3421:3464" ph="insert into table... " />
-            <marker date="1526892767922" expanded="true" signature="5420:5459" ph="delete from " />
-            <marker date="1526892767922" expanded="true" signature="7815:7836" ph="select count... missing_value" />
-            <marker date="1526892767922" expanded="true" signature="7923:7957" ph="delete from " />
-            <marker date="1526892767922" expanded="true" signature="8075:8118" ph="insert into table... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/multiftp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/123.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="1406">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/life.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/world">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/world.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="79" column="11" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+        <state relative-caret-position="1596">
+          <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
           <folding>
             <element signature="e#225#377#0" expanded="false" />
             <element signature="e#404#501#1" expanded="false" />
@@ -1205,19 +1153,226 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/life.py">
+    <entry file="file://$PROJECT_DIR$/apps/web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#26#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/contextlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/world">
+    <entry file="file://$PROJECT_DIR$/apps/compare_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="1748">
+          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#38#50#0" expanded="true" />
+            <element signature="e#5448#5661#0" expanded="false" />
+            <element signature="e#5714#5785#0" expanded="false" />
+            <marker date="1527667229513" expanded="true" signature="2990:3055" ph="update at_tc... " />
+            <marker date="1527667229513" expanded="true" signature="2990:3064" ph="update at_tc... " />
+            <marker date="1527667229513" expanded="true" signature="3543:3564" ph="select count... missing_value" />
+            <marker date="1527667229513" expanded="true" signature="3644:3678" ph="delete from " />
+            <marker date="1527667229513" expanded="true" signature="3644:3684" ph="delete from " />
+            <marker date="1527667229513" expanded="true" signature="3892:3935" ph="insert into table... " />
+            <marker date="1527667229513" expanded="true" signature="5891:5930" ph="delete from " />
+            <marker date="1527667229513" expanded="true" signature="8286:8307" ph="select count... missing_value" />
+            <marker date="1527667229513" expanded="true" signature="8394:8428" ph="delete from " />
+            <marker date="1527667229513" expanded="true" signature="8546:8589" ph="insert into table... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_dbcompare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#41#0" expanded="true" />
+            <marker date="1527650214971" expanded="true" signature="380:428" ph="select count... More_dr_ggprs_20141222_7720" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89737">
+          <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
+          <folding>
+            <marker date="1525252404014" expanded="true" signature="10255:10291" ph="select tabna... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="34151:34220" ph="select host,... dba_db_links" />
+            <marker date="1525252404014" expanded="true" signature="35335:35407" ph="select lower... all_all_tablesmissing_value" />
+            <marker date="1525252404014" expanded="true" signature="35619:35684" ph="select host,... dba_db_links" />
+            <marker date="1525252404014" expanded="true" signature="38437:38544" ph="select para_... at_sys_base_para" />
+            <marker date="1525252404014" expanded="true" signature="38686:38787" ph="select para_... at_sys_base_para" />
+            <marker date="1525252404014" expanded="true" signature="42245:42348" ph="select dbuse... at_tc_dbuser_def" />
+            <marker date="1525252404014" expanded="true" signature="42505:42608" ph="select dbuse... at_tc_dbuser_def" />
+            <marker date="1525252404014" expanded="true" signature="43185:43237" ph="select disti... at_sys_operator_info" />
+            <marker date="1525252404014" expanded="true" signature="43732:43898" ph="select curr_... at_tc_table_names_map" />
+            <marker date="1525252404014" expanded="true" signature="44560:44711" ph="insert into at_tc_table_names_map... " />
+            <marker date="1525252404014" expanded="true" signature="46330:46404" ph="select to_ch... at_tc_task" />
+            <marker date="1525252404014" expanded="true" signature="52591:52629" ph="select busi_... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="53157:53254" ph="select busi_... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="57971:58083" ph="select lower... all_tab_columnsmissing_value" />
+            <marker date="1525252404014" expanded="true" signature="60569:60641" ph="select lower... at_tv_tab_define" />
+            <marker date="1525252404014" expanded="true" signature="61175:61545" ph="select lower... at_tc_dbcmp_tabsinfo" />
+            <marker date="1525252404014" expanded="true" signature="61723:62108" ph="select lower... at_tc_dbcmp_tabsinfo" />
+            <marker date="1525252404014" expanded="true" signature="62294:62695" ph="select lower... at_tc_dbcmp_tabsinfo" />
+            <marker date="1525252404014" expanded="true" signature="65699:66129" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
+            <marker date="1525252404014" expanded="true" signature="65991:66074" ph="select disti... at_tc_busi_compared_tables" />
+            <marker date="1525252404014" expanded="true" signature="66352:66799" ph="select a.DIF... at_tc_dbcmp_diff_scene_def" />
+            <marker date="1525252404014" expanded="true" signature="66662:66745" ph="select disti... at_tc_busi_compared_tables" />
+            <marker date="1525252404014" expanded="true" signature="67423:67624" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
+            <marker date="1525252404014" expanded="true" signature="67506:67589" ph="select disti... at_tc_busi_compared_tables" />
+            <marker date="1525252404014" expanded="true" signature="67787:67915" ph="select a.dif... at_tc_dbcmp_diff_type_def" />
+            <marker date="1525252404014" expanded="true" signature="80542:80553" ph="drop table m... " />
+            <marker date="1525252404014" expanded="true" signature="80626:80637" ph="drop table m... " />
+            <marker date="1525252404014" expanded="true" signature="84646:84714" ph="select colum... all_tab_colsmissing_value" />
+            <marker date="1525252404014" expanded="true" signature="91401:91519" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="91537:91652" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="91670:91786" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="91804:91920" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="92974:93107" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="93125:93256" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="93274:93406" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="94809:94969" ph="insert into at_tc_dbcmp_diff_detail... " />
+            <marker date="1525252404014" expanded="true" signature="94987:95143" ph="insert into at_tc_dbcmp_diff_stat... " />
+            <marker date="1525252404014" expanded="true" signature="95161:95318" ph="insert into at_tc_dbcmp_diff_stat1... " />
+            <marker date="1525252404014" expanded="true" signature="95336:95494" ph="insert into at_tc_dbcmp_diff_count... " />
+            <marker date="1525252404014" expanded="true" signature="96238:96339" ph="select err_c... at_tc_ignore_errcode" />
+            <marker date="1525252404014" expanded="true" signature="96495:96596" ph="select err_c... at_tc_ignore_errcode" />
+            <marker date="1525252404014" expanded="true" signature="96751:96852" ph="select err_c... at_tc_ignore_errcode" />
+            <marker date="1525252404014" expanded="true" signature="99873:99896" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="99983:100006" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="100516:100539" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="100631:100654" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="101204:101490" ph="insert into at_tc_dbcmp_diff_count... " />
+            <marker date="1525252404014" expanded="true" signature="101364:101490" ph="select 'miss... dual" />
+            <marker date="1525252404014" expanded="true" signature="104820:104843" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="104933:104956" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="105042:105065" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="105150:105173" ph="select missi... missing_value" />
+            <marker date="1525252404014" expanded="true" signature="105257:105518" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="105994:106060" ph="select tc_id... at_tc" />
+            <marker date="1525252404014" expanded="true" signature="107912:108078" ph="select curr_... at_tc_table_names_map" />
+            <marker date="1525252404014" expanded="true" signature="108837:108988" ph="insert into at_tc_table_names_map... " />
+            <marker date="1525252404014" expanded="true" signature="129723:130376" ph="select %s,di... " />
+            <marker date="1525252404014" expanded="true" signature="130436:131007" ph="select %s,di... " />
+            <marker date="1525252404014" expanded="true" signature="131059:131342" ph="select %s,di... " />
+            <marker date="1525252404014" expanded="true" signature="133525:133866" ph="insert into missing_value... " />
+            <marker date="1525252404014" expanded="true" signature="140071:140397" ph="insert into at_tc_dbcmp_diff_stat... " />
+            <marker date="1525252404014" expanded="true" signature="140249:140397" ph="select 'miss... " />
+            <marker date="1525252404014" expanded="true" signature="141684:142011" ph="insert into at_tc_dbcmp_diff_stat1... " />
+            <marker date="1525252404014" expanded="true" signature="141863:142011" ph="select 'miss... " />
+            <marker date="1525252404014" expanded="true" signature="144799:145072" ph="select key_i... at_tc_dbcmp_diff_stat" />
+            <marker date="1525252404014" expanded="true" signature="152344:152569" ph="insert into at_tc_dbcmp_diff_stat... " />
+            <marker date="1525252404014" expanded="true" signature="154411:154458" ph="select root_... at_tc" />
+            <marker date="1525252404014" expanded="true" signature="154613:154660" ph="select statu... at_tc_task_tc" />
+            <marker date="1525252404014" expanded="true" signature="154996:155177" ph="select statu... at_tc_task_tc" />
+            <marker date="1525252404014" expanded="true" signature="158784:158906" ph="select lower... at_sys_base_para" />
+            <marker date="1525252404014" expanded="true" signature="168974:169070" ph="select objec... at_sys_obj_define" />
+            <marker date="1525252404014" expanded="true" signature="183557:183633" ph="select date_... at_tc_data_prepare_date" />
+            <marker date="1525252404014" expanded="true" signature="198079:198179" ph="select env_v... at_tc_sysenv" />
+            <marker date="1525252404014" expanded="true" signature="198897:198953" ph="select busi_... at_tc" />
+            <marker date="1525252404014" expanded="true" signature="199156:199224" ph="select count... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="199461:199528" ph="select busi_... at_tc" />
+            <marker date="1525252404014" expanded="true" signature="199760:199909" ph="select total... at_tc_process_result" />
+            <marker date="1525252404014" expanded="true" signature="200526:200714" ph="insert into at_tc_dz_time... " />
+            <marker date="1525252404014" expanded="true" signature="201538:201684" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="201896:201939" ph="select root_... at_tc" />
+            <marker date="1525252404014" expanded="true" signature="202107:202167" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="202225:202284" ph="delete from " />
+            <marker date="1525252404014" expanded="true" signature="202342:202409" ph="select table... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="202619:202805" ph="select 'trun... all_all_tables" />
+            <marker date="1525252404014" expanded="true" signature="202916:203052" ph="select 'trun... all_all_tables" />
+            <marker date="1525252404014" expanded="true" signature="203806:203853" ph="select runty... at_tc_task" />
+            <marker date="1525252404014" expanded="true" signature="204296:204466" ph="select table... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="205101:205210" ph="select sql_p... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="205919:206023" ph="select sql f... " />
+            <marker date="1525252404014" expanded="true" signature="206780:206895" ph="select proce... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="208002:208186" ph="insert into at_tc_dz_time... " />
+            <marker date="1525252404014" expanded="true" signature="208655:208801" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="209304:209461" ph="select table... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="210902:211017" ph="select proce... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="212222:212406" ph="insert into at_tc_dz_time... " />
+            <marker date="1525252404014" expanded="true" signature="212930:213000" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="213145:213291" ph="update at_tc... " />
+            <marker date="1525252404014" expanded="true" signature="213791:213953" ph="select table... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="215394:215509" ph="select proce... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="217524:217648" ph="select lower... at_sys_base_para" />
+            <marker date="1525252404014" expanded="true" signature="218419:218534" ph="select disti... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="220016:220122" ph="select table... at_tc_compared_table_selected" />
+            <marker date="1525252404014" expanded="true" signature="220439:220554" ph="select proce... at_tc_compared_table_selected" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/listener.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding>
+            <element signature="e#246#792#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/dbcmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2331">
+          <caret line="92" column="15" lean-forward="false" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+          <folding>
+            <element signature="e#42#58#0" expanded="true" />
+            <element signature="e#273#459#0" expanded="false" />
+            <element signature="e#519#678#0" expanded="false" />
+            <element signature="e#3175#3705#0" expanded="false" />
+            <marker date="1527661420816" expanded="true" signature="810:831" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="1255:1276" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="1723:1744" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="4641:4710" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="4859:4890" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="6686:6755" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="8995:9143" ph="insert into missing_value... " />
+            <marker date="1527661420816" expanded="true" signature="9648:9707" ph="select count... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="10294:10383" ph="create table... missing_value" />
+            <marker date="1527661420816" expanded="true" signature="11502:11561" ph="select count... missing_value" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,31 +1384,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/tabdef1.py">
+    <entry file="file://$PROJECT_DIR$/apps/namedTuple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="4734" column="16" lean-forward="false" selection-start-line="4734" selection-start-column="16" selection-end-line="4734" selection-end-column="16" />
+        <state relative-caret-position="-3135">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/world.py">
+    <entry file="file://$PROJECT_DIR$/study/execise1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="79" column="11" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
-          <folding>
-            <element signature="e#27#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/event.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

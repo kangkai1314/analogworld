@@ -11,10 +11,11 @@ from contextlib import contextmanager
 
 class ComparasionResult():
 
-    def __init__(self,table_name):
+    def __init__(self,table_name,task_id):
         self.result_dic=None
         self.report={}
         self.busi=table_name.split('_')[1]
+        self.task_id=task_id
 
     def report_init(self):
         self.report=OrderedDict(
@@ -84,9 +85,16 @@ class ComparasionResult():
         print self.report
 
 
-    def insert(self):
+    def update_to_table(self,):
         if self.report:
-            insert_sql='''insert into table {table_name}({columns}) VALUES ({values})'''.format()
+            for i in self.report:
+                key=i
+                v=self.report[key]
+                update_sql='''update at_tc_dz_cmp_result set {key_field}={value} where task_id={task_id}; '''.format(key_field=key,
+                                                                                                                     value=v,
+                                                                                                                     task_id=self.task_id)
+                print update_sql
+
 
 
 class ResultClean():

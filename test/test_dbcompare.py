@@ -1,16 +1,15 @@
 #--*-- coding:utf-8 --*--
 import unittest
-from apps.dbcmp import *
+from regress.dbcmp import *
+from regress.atdb import *
 
-
-from utils.db import *
 
 class TestCompare(unittest.TestCase):
     def setUp(self):
         self.conn='atptest/atptest@oel1247'
         self.dbobj=None
         self.dbobj = DBObj(self.conn)
-        self.table='dr_ggprs_1_20141222_7720'
+        self.table='dr_ggprs_701_201805'
 
     def test_db(self):
         self.dbobj=DBObj(self.conn)
@@ -19,7 +18,7 @@ class TestCompare(unittest.TestCase):
         print msg
 
     def test_totalfeecount(self):
-        t=TotalFeeCount('dr_ggprs_1_20141222_7720',0)
+        t=TotalFeeCount(self.table,0)
         gen_sql=t.generate()
         print gen_sql
         #self.assertEqual('sql',gen_sql)
@@ -54,14 +53,11 @@ class TestCompare(unittest.TestCase):
         result=dbcom.run()
         dbcom.update_result(result)
 
-
-
     def test_report(self):
         r=ComparasionResult('dr_ggprs')
         r.report_init()
         print r.report
         print r.result_dic
-
 
     def test_mdbcompare(self):
         pass
@@ -69,9 +65,9 @@ class TestCompare(unittest.TestCase):
     def test_uploadcompare(self):
         pass
 
-
-
-
-
     def tearDown(self):
         self.dbobj=None
+
+
+if __name__ == '__main__':
+    unittest.main()

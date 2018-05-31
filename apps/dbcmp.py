@@ -6,10 +6,11 @@ db比对算法
 import threading
 import datetime,time
 import inspect
-from apps.compare import *
+from regress.compare_test import *
 from functools import wraps
-from utils.db import DBObj
+from regress.atdb import DBObj
 from threading import current_thread
+from contextlib import contextmanager
 
 CmpDict={'1':'TotalFeeCount',
          '2':'ConsistentFeeCount',
@@ -121,9 +122,9 @@ class Sql(object):
         raise NotImplementedError
 
     def get_db(self,flag=None):
-        conn_old = 'atptest/atptest@oel1247'
-        conn_new='atptest/atptest@oel1247'
-        conn_ori='atptest/atptest@oel1247'
+        conn_old = 'ud_old/ud_old@newjfbx'
+        conn_new='ud_new/ud_new@newjfbx'
+        conn_ori='at/at@newjfbx'
         if flag is None:
             return [(i.split('/')[0],DBObj(i)) for i in [conn_new,conn_old,conn_ori]]
         elif flag==0:
