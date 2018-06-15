@@ -4,15 +4,10 @@ class A(object):
         self.a=a
 
 
-
-
-
-
 def main():
     a=A('helo')
     a.name='hello'
     print a.name
-
 
 if __name__ == '__main__':
     main()

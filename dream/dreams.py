@@ -15,12 +15,16 @@ class Dream(object):
             print 'never miss a girl like today'
             print 'perhaps i do not forget her'
             print 'one day ,i will find her'
-            print'tell her ,i love her'
+            print 'tell her ,i love her'
             print 'i want to spend left days to accompany with her'
             print 'you are my best lovers'
             print ' i can not love a girl so much except her'
             print 'once a day you will forget me'
             print 'but i am not'
+            print  'keep focus'
+            print 'best choices'
+            print 'this is what you want to knows to do'
+            print 'stay  authuniasm'
 
 
 

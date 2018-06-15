@@ -47,8 +47,7 @@ class MultiFtp(object):
                 else:
                     errfilelst.append(f)
             else:
-                errfilelst.append(f)
-
+                errfilelst
         if errfilelst!=os.listdir(self.src_path):
             ret=True
         else:

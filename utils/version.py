@@ -12,6 +12,12 @@ class Version():
         self.update_time=None
         self.executor=None
         self.updateFlag=False
+        self.versions=[]
+
+        
+
+    def __iter__(self):
+        return iter(self.versions)
 
 
     def check_version(self):
