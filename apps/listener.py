@@ -6,7 +6,10 @@ import datetime
 from threading import current_thread
 from collections import defaultdict
 from adapter import BaseAdapter
+import random
 
+import concurrent
+from concurrent import futures
 
 class BaseListener(object):
     type='default'
@@ -102,29 +105,85 @@ def sleep(n):
     print '%s cost %s s'%(current_thread().name,str(end-start))
     lock.release()
 
+
+
+class ChatRobot(object):
+    def __init__(self):
+        pass
+
+    def chat(self):
+
+        answer=None
+        while True:
+            question = yield answer
+            answer =self.gen_answer()
+            print '康凯:{}'.format(question)
+
+
+
+    def gen_answer(self):
+        answerlst=['1','2','3']
+        return random.choice(answerlst)
+
+
+
+def  download_one(pics):
+    print ' start dowmload '
+
+
+
+
+    def rmdup(list1, list2):
+        print list1
+        print list2
+        sort_list1 = []
+
+def queue(gropups):
+    if gropups.find('GB') >-1 or gropups.find('BG')>-1:
+        pass
+    else:
+        return 0
+
+def find(t,a):
+    for al in a:
+
+        for j in al:
+            print j
+            if t ==j:
+                return True
+            else:
+                return  False
+
+
+def replace(str):
+    str1=''
+    for i in str.split():
+        gen_str=i+'%20'
+        str1+=gen_str
+
+    return str1
+
+
+
+
 def main():
+    cr=ChatRobot()
+    chat=cr.chat()
+    next(chat)
+    questionlst=['你最喜欢的人?','你最喜欢的动物是什么','你最喜欢的球星是什么']
+    for i in questionlst:
+        ans=chat.send(i)
+        print '林志玲:{}'.format(ans)
 
+    a=[1,2,3,4,5]
+    print a[::2]
+    print a[-2:]
+    print a[:-2]
+    print sum(i+3 for i in a[::2])
+    find(7,[[1,2,8,9],[2,4,9,12],[4,7,10,13],[6,8,11,15]])
+    find(5,[[1,2,8,9],[2,4,9,12],[4,7,10,13],[6,8,11,15]])
+    print replace('WE ARE HAPPY')
 
-    threadlst=[]
-    for i in range(5):
-        t=threading.Thread(target=sleep,args=(10,))
-        threadlst.append(t)
-    tl=ThreadListener(threadlst)
-    ba=BaseAdapter(tl,dict(listen=tl.run))
-    ba.listen()
-    ll=iter(tl)
-    print ll
-    for i in ll :
-        print i
-
-    for i in threadlst:
-        print i
-        i.start()
-
-    for i in threadlst:
-        print i
-        i.join()
-    tl.run()
 
 
 

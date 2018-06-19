@@ -4,3 +4,64 @@ user operation flow:
 user into system ,insert topic ,insert choices,
 system according to different factors to predict which is better
 --------------------------------------------------------------------
+#this is for running man game set
+#yesterday game
+#12people two-two cp
+#assign four thievfs and one leader theivf  and the king
+#for three rounds  each round can choose two cps and verficate the info of nums of theif
+#game flow:
+1.start-game :assigin each indetity for each person
+2.one-round:game one :rule;crisma race:each cp can give a topic to race which is infident to win ,
+win once can get points ,finaly  get most points  is winner ,and get rights to verify the identity
+3.one-round end: each person get 30s to free chat theri ideas ,winners to execute the rights and
+4.two-round:game two: rule:the fight on the bowl :all people divide into two groups
+each group fight in the one bowl ,which cp can stay in bowl at last  is winner .
+5.two-round end :rule sim to one round
+6.three round: for last game ,the host will give a question,answer is which number ,corrcet numbers of people should be
+hubbled ,each people can get one point ,finaly the get most points for people can get the win of game
+7.three-round end :rule sim to one round
+8.final :all people can vote for king and thievf leader ,guess for correct answer of king or leader is winner.
+---------------------------------------------------------------------------------------------------------------
+#this is for daily-work-platform
+#think about of daily work to do
+#make a simulation backsatge
+#daily-operation or week-operation to define
+#perfect idea :auto coder:according to your idea to auto create or complete the code
+#platform function:
+#1.provider of the content of what you want for -----realize the function by scrapy
+#2.daily operation (can define the frequency once a day)
+--------------------------------------------------------------------------------------------------
+#make a platform for make  a person better
+#which a stage to help people to think about
+#you how to think about yourself
+#what do you want to do for improve yourself
+#change your habit to change your self
+------------------------------------------------------------------------------------------------------
+#make a platform for funds inverstigation
+#data flow:1.show top ten funds of history benfit rate or other standard or ten funds of what you like
+#2.draft the stagety of inverstate :
+stargety 1:sort the ten funds  that influnece the value of every operation of amuont to invetst
+2.from no 1 to last  ,amount set from 1000 to 100
+3.if that day the funds delicine by 1% plus ,auto buy funds the amount
+4.after one month ,evaluate the benift of this stargety.
+----------------------------------------------------------------------------------------------------------
+#make a platform for mosheng
+#this app aims at help people to get to know more people of near circle ,expands their cirlcles
+help to make your busy life more colorful
+----------------------------------------------------------------------------------------------------------
+计划:
+接下来的半年时间，以找工作为目的，好好学习python，不过要明确自己的目标，自己最终的目标是需要自己能够独立完成自己想要的东西的
+就是能够完整的完成一整个产品的迭代，最好能上线的那种，不过目前以python编程为主，接触到python的方方面面的东西，然后每天做一个多小时的算法编程
+来提高自己的思考能力，不过，我只需要完成一个小时的那种，来锻炼自己的思维能力，不需要做太多的东西
+然后今天的基本上已经完成，对于后续的计划，我决定转向django或者flask等前端编程的工作，以这个为主，去做网站会比目前的东西好很多
+然后，在学习一些前端的知识，掌握一下基础的css和html，去完成自己想要的东西，这个是必须要学的东西
+目前，对于自己来说，前端的东西会比较陌生，算法不熟，代码写的太少，设计模式也用的太少，几乎所有缺陷自己都大概知道自己缺少的是什么，
+对于自己的未来，自己考虑的是，多赚点钱，然后考虑能回家就回家，后续不需要自己再去努力的得到什么东西
+对于目前的状况，自己不需要着急，慢点来，有工作就做工作，没有工作就接着学习，自己希望对于自己要有点要求的吧，希望自己能够做成一些事情
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

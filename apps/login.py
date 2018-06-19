@@ -57,8 +57,6 @@ class Login(Action):
 
 
 
-
-
 class Regist(Action):
     action_id = 3
     def __init__(self,name,passwd):

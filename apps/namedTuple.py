@@ -26,9 +26,6 @@ class NamedTuple(tuple):
         if hasattr(cls,iterable):
             pass
 
-
-
-
     def __init__(self,iterable,fileds):
         self.iterable=iterable
         self.fileds=fileds

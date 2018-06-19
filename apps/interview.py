@@ -1,6 +1,7 @@
 #--*-- coding:utf-8 --*--
 import abc
 import re
+
 class Interview():
 
     def __init__(self,name):
