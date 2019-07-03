@@ -85,10 +85,6 @@ class World:
         else:
             pass
 
-
-
-
-
     def random_user(self):
         print 'add user'
         age=random.randint(15,30)

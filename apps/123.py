@@ -38,11 +38,6 @@ class Ecc():
     def echo(self):
         for i in xrange(100):
             num=yield
-
-
-
-
-
 print sys.exc_info()
 
 a=dict(
